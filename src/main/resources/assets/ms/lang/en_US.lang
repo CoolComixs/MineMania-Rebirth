@@ -1,0 +1,75 @@
+item.DirtPickaxe.name=Dirt Pickaxe
+item.DirtSword.name=Dirt Sword
+item.DirtShovel.name=Dirt Shovel
+item.DirtHoe.name=Dirt Hoe
+item.DirtAxe.name=Dirt Axe
+
+item.glassPickaxe.name=Glass Pickaxe
+item.glassSword.name=Glass Sword
+item.glassShovel.name=Glass Shovel
+item.glassHoe.name=Glass Hoe
+item.glassAxe.name=Glass Axe
+
+item.potPickaxe.name=Potato Pickaxe
+item.potSword.name=Potato Sword
+item.potShovel.name=Potato Shovel
+item.potHoe.name=Potato Hoe
+item.potAxe.name=Potato Axe
+
+item.pothelm.name=Potato Helmet
+item.potchest.name=Potato Chestplate
+item.potlegs.name=Potato Leggings
+item.potboots.name=Potato Boots
+
+item.rsPickaxe.name=Redstone Pickaxe
+item.rsSword.name=Redstone Sword
+item.rsShovel.name=Redstone Shovel
+item.rsHoe.name=Redstone Hoe
+item.rsAxe.name=Redstone Axe
+
+item.hRoot.name=Holy Root
+
+item.Diamondium.name=Diamondium
+item.DiamondiumN.name=Diamondium Nugget
+item.diamondiumPickaxe.name=Diamondium Pickaxe
+item.diamondiumShovel.name=Diamondium Shovel
+item.diamondiumSword.name=Diamondium Sword
+item.diamondiumHoe.name=Diamondium Hoe
+item.diamondiumAxe.name=Diamondium Axe
+item.diamondiumhelm.name=Diamondium Helmet
+item.diamondiumchest.name=Diamondium Chestplate
+item.diamondiumlegs.name=Diamondium Leggings
+item.diamondiumboots.name=Diamondium Boots
+tile.DiamondiumBlock.name=Block of Diamondium
+
+item.CHHelm.name=ChainLeather Helmet
+item.CHChest.name=ChainLeather Chestplate
+item.CHLegs.name=ChainLeather Leggings
+item.CHBoots.name=ChainLeather Boots
+
+item.NRpic.name=Netherrack Pickaxe
+item.NRsword.name=Netherrack Sword
+item.NRhoe.name=Netherrack Hoe
+item.NRaxe.name=Netherrack Axe
+item.NRshovel.name=Netherrack Shovel
+
+tile.UltimatiumOre.name=Ultimatium Ore
+item.Ultimatium.name=Ultimatium Gem
+tile.UltimatiumBlock.name=Block of Ultimatium
+item.Ultimatiumpic.name=Ultimatium Pickaxe
+item.Ultimatiumsword.name=Ultimatium Sword
+item.Ultimatiumhoe.name=Ultimatium Hoe
+item.Ultimatiumshovel.name=Ultimatium Shovel
+item.Ultimatiumaxe.name=Ultimatium Axe
+item.UltimatiumHelm.name=Ultimatium Helmet
+item.UltimatiumChest.name=Ultimatium Chestplate
+item.UltimatiumLegs.name=Ultimatium Leggings
+item.UltimatiumBoots.name=Ultimatium Boots
+
+tile.Liquefier.name=Liquefier
+
+
+itemGroup.tabMST=MineMania Tools
+itemGroup.tabMSA=MineMania Armor
+itemGroup.tabMSI=MineMania Items
+itemGroup.tabMSB=MineMania Blocks

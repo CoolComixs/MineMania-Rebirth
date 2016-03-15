@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sm",
+  "name": "MineMania: Rebirth",
+  "description": "MineMania: Rebirth is the recreation of all my mods plus more!",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "http://yt.comixsyt.net",
+  "updateUrl": "",
+  "authorList": ["ComixsYT"],
+  "credits": "Special thanks to the following for ideas/help - MrSmiley101KP, PurpleGuyVincent, AwesomeGuy3423",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
