@@ -5,6 +5,7 @@ import java.util.Random;
 import com.comixsyt.ms.ms;
 import com.comixsyt.ms.tile_entity.TileEntityLiquefier;
 
+import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -33,7 +34,7 @@ public class Liquefier extends Block {
 	private final boolean isBurning2;
 	private final Random random = new Random();
 
-	protected Liquefier(boolean isActive) {
+	public Liquefier(boolean isActive) {
 		super(Material.rock);
 
 		isBurning2 = isActive;
@@ -59,11 +60,12 @@ public class Liquefier extends Block {
 
 	}
 
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7,
-			float par8, float par9) {
-		player.openGui(ms.modInstance, 0, world, x, y, z);
-		return true;
-	}
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
+        if (!world.isRemote){
+            FMLNetworkHandler.openGui(player, ms.modInstance, 0, world, x, y, z);
+        }
+        return true;
+    }
 
 	public Item getItemDropped(int par1, Random random, int par3) {
 		return Item.getItemFromBlock(ms.Liquefier);

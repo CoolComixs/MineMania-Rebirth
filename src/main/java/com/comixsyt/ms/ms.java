@@ -4,6 +4,7 @@ import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Liquefier;
 import com.comixsyt.ms.block.UltimatiumBlock;
 import com.comixsyt.ms.block.UltimatiumOre;
+import com.comixsyt.ms.handler.GuiHandler;
 import com.comixsyt.ms.item.CHarmor;
 import com.comixsyt.ms.item.Diamondiumaxe;
 import com.comixsyt.ms.item.Diamondiumhoe;
@@ -47,6 +48,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -64,6 +66,7 @@ public class ms {
 
 	@SidedProxy(clientSide = "com.comixsyt.ms.ClientProxy", serverSide = "com.comixsyt.ms.ServerProxy")
 	public static ServerProxy proxy;
+	
 
 	// dirt
 	public static Item itemDirtPic; // always a habit for the first to have item
@@ -184,7 +187,13 @@ public class ms {
 		// Item & block Initialization and registering
 		// Config handling if I want it latter on, most likely will no be added
 
+		proxy.registerTileEntities();
+		proxy.registerRenderThings();
+
+				
 		oreDictionary();
+		
+		
 		// Tools & Armor
 		// dirt tools
 		itemDirtPic = new itemDirtPic(dirtMaterial).setUnlocalizedName("DirtPickaxe").setTextureName("ms:dirt_pic")
@@ -283,7 +292,7 @@ public class ms {
 		GameRegistry.registerItem(hRoot, hRoot.getUnlocalizedName());
 
 		Liquefier = new Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
-		LiquefierActive = new LiquefierActive(true).setBlockName("LiquefierActive");
+		LiquefierActive = new Liquefier(true).setBlockName("LiquefierActive");
 
 		GameRegistry.registerBlock(Liquefier, Liquefier.getUnlocalizedName());
 		GameRegistry.registerBlock(LiquefierActive, LiquefierActive.getUnlocalizedName());
@@ -418,7 +427,8 @@ public class ms {
 	public void init(FMLInitializationEvent event) {
 		// proxy, Entities, GUIs, packets
 
-		proxy.registerTileEntities();
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+
 		proxy.registerNetworkStuff();
 
 		// dirt

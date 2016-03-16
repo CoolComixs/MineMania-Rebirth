@@ -1,5 +1,6 @@
 package com.comixsyt.ms.handler;
 
+import com.comixsyt.ms.gui.GuiLiquefier;
 import com.comixsyt.ms.inventory.ContainerLiquefier;
 import com.comixsyt.ms.tile_entity.TileEntityLiquefier;
 

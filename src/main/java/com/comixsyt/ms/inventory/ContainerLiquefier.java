@@ -20,6 +20,10 @@ public class ContainerLiquefier extends Container {
 	private int lastBurnTime;
 	private int lastItemBurnTime;
 	
+	public ContainerLiquefier(InventoryPlayer inventory, TileEntityLiquefier tileEntityFurnace) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void ContainerLiquefiere(InventoryPlayer player, TileEntityLiquefier tileEntityFurnace){
 		this.tileFurnace = tileEntityFurnace;
 		this.addSlotToContainer(new Slot(tileEntityFurnace, 0, 56, 17));

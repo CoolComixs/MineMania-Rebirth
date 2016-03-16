@@ -19,10 +19,17 @@ public class ServerProxy {
 	}
 	
 	public void registerNetworkStuff(){
-		NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new com.comixsyt.ms.handler.GuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new GuiHandler());
+        //NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+
+
+		
 	}
 
 	public void registerTileEntities(){
+		//GameRegistry.registerTileEntity(TileEntityLiquefier.class, "msTileEntityLiquefier");
 		GameRegistry.registerTileEntity(TileEntityLiquefier.class, "msTileEntityLiquefier");
+		
+		
 	}
 }
