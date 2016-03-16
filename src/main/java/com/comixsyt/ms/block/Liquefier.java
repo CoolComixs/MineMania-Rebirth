@@ -43,9 +43,9 @@ public class Liquefier extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconregister) {
-		this.blockIcon = iconregister.registerIcon("ms:Liquefier_side");
-		this.front = iconregister.registerIcon(this.isBurning2 ? "ms:Liquefier_off" : "ms:Liquefier_on");
-		this.top = iconregister.registerIcon("ms:Liquefier_top");
+		this.blockIcon = iconregister.registerIcon("ms:l_side");
+		this.front = iconregister.registerIcon(this.isBurning2 ? "ms:l_off" : "ms:l_on");
+		this.top = iconregister.registerIcon("ms:l_top");
 
 	}
 
