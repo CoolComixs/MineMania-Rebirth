@@ -231,6 +231,7 @@ public class ms {
 		GameRegistry.registerItem(glassHoe, glassHoe.getUnlocalizedName());
 		GameRegistry.registerItem(glassAxe, glassAxe.getUnlocalizedName());
 
+		
 		// potato
 		potPic = new potPic(potMaterial).setUnlocalizedName("potPickaxe").setTextureName("ms:potpic")
 				.setCreativeTab(tabMST);
