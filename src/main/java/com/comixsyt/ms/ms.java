@@ -178,8 +178,10 @@ public class ms {
 			new int[] { 5, 9, 5, 5 }, 18);
 	public static final Item.ToolMaterial UltimatiumT = EnumHelper.addToolMaterial("UltimatiumT", 6, 4999, 14.0F, 5.5F,
 			18);
-
+	
+	@Mod.Instance
 	public static ms modInstance;
+	
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -428,8 +430,11 @@ public class ms {
 	public void init(FMLInitializationEvent event) {
 		// proxy, Entities, GUIs, packets
 
-        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+      //  NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+          NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new GuiHandler());
+        
 
+        
 		proxy.registerNetworkStuff();
 
 		// dirt
