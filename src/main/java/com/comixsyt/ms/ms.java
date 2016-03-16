@@ -180,7 +180,7 @@ public class ms {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		// Who the fuck thought FMLPreInitializationEven should be one word?
+		// Who the fuck thought FMLPreInitializationEvent should be one word?
 		// Item & block Initialization and registering
 		// Config handling if I want it latter on, most likely will no be added
 
