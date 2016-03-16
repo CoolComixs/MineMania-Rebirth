@@ -3,6 +3,7 @@ package com.comixsyt.ms.block;
 import java.util.Random;
 
 import com.comixsyt.ms.ms;
+import com.comixsyt.ms.tile_entity.TileEntityLiquefier;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -163,7 +164,7 @@ public class Liquefier extends Block {
 			TileEntityLiquefier tileentityliquefier = (TileEntityLiquefier) world.getTileEntity(x, y, z);
 
 			if (tileentityliquefier != null) {
-				for (int i = 0; i < tileentityliquefier.getInventorySize; ++i) {
+				for (int i = 0; i < tileentityliquefier.getSizeInventory(); ++i) {
 					ItemStack itemstack = tileentityliquefier.getStackInSlot(i);
 
 					if (itemstack != null) {
