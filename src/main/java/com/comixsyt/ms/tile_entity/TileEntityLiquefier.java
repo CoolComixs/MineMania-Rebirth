@@ -8,6 +8,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -25,6 +26,8 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityLiquefier extends TileEntity implements ISidedInventory {
 
+	public int direction;
+	
 	private static final int[] slotsTop = new int[] { 0 };
 	private static final int[] slotsBottom = new int[] { 2, 1 };
 	private static final int[] slotsSides = new int[] { 1 };
@@ -336,5 +339,19 @@ public class TileEntityLiquefier extends TileEntity implements ISidedInventory {
 	public boolean canExtractItem(int par1, ItemStack itemstack, int par3) {
 		return par3 != 0 || par1 != 1 || itemstack.getItem() == Items.bucket;
 	}
+
+
+
+	public void wasPlaced(EntityLivingBase entityliving, ItemStack itemStack) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+    public void setFacing(int facing2)
+    {
+        this.direction = facing2;
+    }
 
 }

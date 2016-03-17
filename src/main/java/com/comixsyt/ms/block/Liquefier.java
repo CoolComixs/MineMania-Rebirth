@@ -9,6 +9,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
+import net.minecraft.block.BlockPistonBase;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,6 +19,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -36,13 +38,41 @@ public class Liquefier extends BlockContainer {
 	public Liquefier(boolean isActive) {
 		super(Material.rock);
 		isBurning2 = isActive;
+		//this.rotateBlock(null, x, y, z, axis)
+		
+
+		
 	}
 
+	
+	private void setDefaultDirection(World par1World, int par2, int par3, int par4) {
+		if (!par1World.isRemote) {
+			Block l = par1World.getBlock(par2, par3, par4 - 1);
+			Block i1 = par1World.getBlock(par2, par3, par4 + 1);
+			Block j1 = par1World.getBlock(par2 - 1, par3, par4);
+			Block k1 = par1World.getBlock(par2 + 1, par3, par4);
+			byte b0 = 3;
+			if (l.func_149730_j() && !i1.func_149730_j())
+				b0 = 3;
+
+			if (i1.func_149730_j() && !l.func_149730_j())
+				b0 = 2;
+
+			if (j1.func_149730_j() && !k1.func_149730_j())
+				b0 = 5;
+
+			if (k1.func_149730_j() && !j1.func_149730_j())
+				b0 = 4;
+
+			par1World.setBlockMetadataWithNotify(par2, par3, par4, b0, 2);
+		}
+	}
+	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconregister) {
-		this.blockIcon = iconregister.registerIcon("ms:l_side");
+		this.blockIcon = iconregister.registerIcon(this.isBurning2 ? "ms:l_on" : "ms:l_off");
 		this.front = iconregister.registerIcon(this.isBurning2 ? "ms:l_on" : "ms:l_off");
-		this.top = iconregister.registerIcon("ms:l_top");
+		this.top = iconregister.registerIcon(this.isBurning2 ? "ms:l_on" : "ms:l_off");
 
 	}
 
@@ -112,7 +142,7 @@ public class Liquefier extends BlockContainer {
 		}
 	}
 
-	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack) {
+/*	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack) {
 		int direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
 		if (direction == 0) {
@@ -134,8 +164,79 @@ public class Liquefier extends BlockContainer {
 		if (itemstack.hasDisplayName()) {
 			((TileEntityLiquefier) world.getTileEntity(x, y, z)).furnaceName(itemstack.getDisplayName());
 		}
-	}
+	}*/
+	
+/*    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack)
+    {
+        int l = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
+        if (l == 0)
+        {
+            world.setBlockMetadataWithNotify(x, y, z, 2, 2);
+        }
+
+        if (l == 1)
+        {
+            world.setBlockMetadataWithNotify(x, y, z, 5, 2);
+        }
+
+        if (l == 2)
+        {
+            world.setBlockMetadataWithNotify(x, y, z, 3, 2);
+        }
+
+        if (l == 3)
+        {
+            world.setBlockMetadataWithNotify(x, y, z, 4, 2);
+        }
+
+        if (itemstack.hasDisplayName())
+        {
+            ((TileEntityFurnace)world.getTileEntity(x, y, z)).func_145951_a(itemstack.getDisplayName());
+        }
+    }*/
+
+    @Override
+    public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack itemStack)
+    {
+        byte chestFacing = 0;
+        int facing = MathHelper.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;
+        if (facing == 0)
+        {
+            chestFacing = 2;
+        }
+        if (facing == 1)
+        {
+            chestFacing = 5;
+        }
+        if (facing == 2)
+        {
+            chestFacing = 3;
+        }
+        if (facing == 3)
+        {
+            chestFacing = 4;
+        }
+        TileEntity TileEntityLiquefier = world.getTileEntity(i, j, k);
+        if (TileEntityLiquefier != null && TileEntityLiquefier instanceof TileEntityLiquefier)
+        {
+            TileEntityLiquefier teic = (TileEntityLiquefier) TileEntityLiquefier;
+            teic.wasPlaced(entityliving, itemStack);
+            teic.setFacing(chestFacing);
+            world.markBlockForUpdate(i, j, k);
+        }
+    }
+	
+	
+/*	@Override
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
+		if(entity==null){
+			return;
+		}
+		TileEntityLiquefier tile =(TileEntityLiquefier) world.getTileEntity(x, y, z);
+		tile.direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360) + 0.5D) & 3;
+	}*/
+	
 	public static void updateBlockState(boolean burning, World world, int x, int y, int z) {
 		int direction = world.getBlockMetadata(x, y, z);
 		TileEntity tileentity = world.getTileEntity(x, y, z);

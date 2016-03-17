@@ -66,7 +66,6 @@ public class ms {
 
 	@SidedProxy(clientSide = "com.comixsyt.ms.ClientProxy", serverSide = "com.comixsyt.ms.ServerProxy")
 	public static ServerProxy proxy;
-	
 
 	// dirt
 	public static Item itemDirtPic; // always a habit for the first to have item
@@ -178,10 +177,9 @@ public class ms {
 			new int[] { 5, 9, 5, 5 }, 18);
 	public static final Item.ToolMaterial UltimatiumT = EnumHelper.addToolMaterial("UltimatiumT", 6, 4999, 14.0F, 5.5F,
 			18);
-	
+
 	@Mod.Instance
 	public static ms modInstance;
-	
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -192,10 +190,8 @@ public class ms {
 		proxy.registerTileEntities();
 		proxy.registerRenderThings();
 
-				
 		oreDictionary();
-		
-		
+
 		// Tools & Armor
 		// dirt tools
 		itemDirtPic = new itemDirtPic(dirtMaterial).setUnlocalizedName("DirtPickaxe").setTextureName("ms:dirt_pic")
@@ -233,7 +229,6 @@ public class ms {
 		GameRegistry.registerItem(glassHoe, glassHoe.getUnlocalizedName());
 		GameRegistry.registerItem(glassAxe, glassAxe.getUnlocalizedName());
 
-		
 		// potato
 		potPic = new potPic(potMaterial).setUnlocalizedName("potPickaxe").setTextureName("ms:potpic")
 				.setCreativeTab(tabMST);
@@ -430,13 +425,13 @@ public class ms {
 	public void init(FMLInitializationEvent event) {
 		// proxy, Entities, GUIs, packets
 
-      //  NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
-          NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new GuiHandler());
-        
+		// NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new GuiHandler());
 
-        
 		proxy.registerNetworkStuff();
 
+		GameRegistry.addRecipe(new ItemStack(Liquefier),
+				new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Items.bucket });
 		// dirt
 		GameRegistry.addRecipe(new ItemStack(itemDirtPic),
 				new Object[] { "DDD", " S ", " S ", 'D', Blocks.dirt, 'S', Items.stick });
