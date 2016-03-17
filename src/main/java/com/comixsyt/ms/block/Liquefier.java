@@ -5,7 +5,6 @@ import java.util.Random;
 import com.comixsyt.ms.ms;
 import com.comixsyt.ms.tile_entity.TileEntityLiquefier;
 
-import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -27,7 +26,6 @@ public class Liquefier extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon top;
-
 	@SideOnly(Side.CLIENT)
 	private IIcon front;
 
@@ -37,9 +35,7 @@ public class Liquefier extends BlockContainer {
 
 	public Liquefier(boolean isActive) {
 		super(Material.rock);
-
 		isBurning2 = isActive;
-
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -58,7 +54,6 @@ public class Liquefier extends BlockContainer {
 		} else {
 			return this.blockIcon;
 		}
-
 	}
 
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7,
@@ -75,21 +70,26 @@ public class Liquefier extends BlockContainer {
 		return Item.getItemFromBlock(ms.Liquefier);
 	}
 
+	/**
+	 * Returns a new instance of a block's tile entity class. Called on placing
+	 * the block.
+	 */
+	public TileEntity createNewTileEntity(World world, int par2) {
+		return new TileEntityLiquefier();
+	}
+
 	@SideOnly(Side.CLIENT)
 	public void onBlockAdded(World world, int x, int y, int z) {
-
 		super.onBlockAdded(world, x, y, z);
 		this.direction(world, x, y, z);
-
 	}
 
 	private void direction(World world, int x, int y, int z) {
-
 		if (!world.isRemote) {
 			Block direction = world.getBlock(x, y, z - 1);
 			Block direction1 = world.getBlock(x, y, z + 1);
 			Block direction2 = world.getBlock(x - 1, y, z);
-			Block direction3 = world.getBlock(x + 1, y, z - 1);
+			Block direction3 = world.getBlock(x + 1, y, z);
 			byte byte0 = 3;
 
 			if (direction.func_149730_j() && direction.func_149730_j()) {
@@ -109,34 +109,31 @@ public class Liquefier extends BlockContainer {
 			}
 
 			world.setBlockMetadataWithNotify(x, y, z, byte0, 2);
-
 		}
-
 	}
 
 	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack) {
-
 		int direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
 		if (direction == 0) {
 			world.setBlockMetadataWithNotify(x, y, z, 2, 2);
 		}
+
 		if (direction == 1) {
 			world.setBlockMetadataWithNotify(x, y, z, 5, 2);
 		}
+
 		if (direction == 2) {
 			world.setBlockMetadataWithNotify(x, y, z, 3, 2);
 		}
+
 		if (direction == 3) {
 			world.setBlockMetadataWithNotify(x, y, z, 4, 2);
 		}
 
 		if (itemstack.hasDisplayName()) {
-
 			((TileEntityLiquefier) world.getTileEntity(x, y, z)).furnaceName(itemstack.getDisplayName());
-
 		}
-
 	}
 
 	public static void updateBlockState(boolean burning, World world, int x, int y, int z) {
@@ -154,23 +151,20 @@ public class Liquefier extends BlockContainer {
 		world.setBlockMetadataWithNotify(x, y, z, direction, 2);
 
 		if (tileentity != null) {
-
 			tileentity.validate();
 			world.setTileEntity(x, y, z, tileentity);
-
 		}
 	}
 
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
 		if (!isBurning) {
-			TileEntityLiquefier tileentityliquefier = (TileEntityLiquefier) world.getTileEntity(x, y, z);
+			TileEntityLiquefier tileentitytutfurnace = (TileEntityLiquefier) world.getTileEntity(x, y, z);
 
-			if (tileentityliquefier != null) {
-				for (int i = 0; i < tileentityliquefier.getSizeInventory(); ++i) {
-					ItemStack itemstack = tileentityliquefier.getStackInSlot(i);
+			if (tileentitytutfurnace != null) {
+				for (int i = 0; i < tileentitytutfurnace.getSizeInventory(); ++i) {
+					ItemStack itemstack = tileentitytutfurnace.getStackInSlot(i);
 
 					if (itemstack != null) {
-
 						float f = this.random.nextFloat() * 0.6F + 0.1F;
 						float f1 = this.random.nextFloat() * 0.6F + 0.1F;
 						float f2 = this.random.nextFloat() * 0.6F + 0.1F;
@@ -197,14 +191,10 @@ public class Liquefier extends BlockContainer {
 							entityitem.motionY = (double) ((float) this.random.nextGaussian() * f3 + 0.1F);
 							entityitem.motionZ = (double) ((float) this.random.nextGaussian() * f3);
 							world.spawnEntityInWorld(entityitem);
-
 						}
-
 					}
 				}
-
 				world.func_147453_f(x, y, z, block);
-
 			}
 		}
 		super.breakBlock(world, x, y, z, block, meta);
@@ -231,14 +221,7 @@ public class Liquefier extends BlockContainer {
 				world.spawnParticle("smoke", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
 				world.spawnParticle("flame", (double) (xx - zz2), (double) yy, (double) (zz + xx2), 0.0F, 0.0F, 0.0F);
 			}
-
 		}
-
-	}
-
-	@Override
-	public TileEntity createNewTileEntity(World world, int par2) {
-		return new TileEntityLiquefier();
 	}
 
 }
