@@ -246,7 +246,7 @@ public class TileEntityLiquefier extends TileEntity implements ISidedInventory {
 
 			--this.furnaceItemStacks[0].stackSize;
 
-			if (this.furnaceItemStacks[0].stackSize >= 0) {
+			if (this.furnaceItemStacks[0].stackSize == 0) {
 				this.furnaceItemStacks[0] = null;
 			}
 		}
