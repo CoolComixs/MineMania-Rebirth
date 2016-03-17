@@ -1,5 +1,6 @@
 package com.comixsyt.ms.inventory;
 
+import com.comixsyt.ms.handler.LiquefierRecipes;
 import com.comixsyt.ms.tile_entity.TileEntityLiquefier;
 
 import cpw.mods.fml.relauncher.Side;
@@ -11,7 +12,7 @@ import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
+//import net.minecraft.item.crafting.FurnaceRecipes;
 
 public class ContainerLiquefier extends Container {
 
@@ -102,7 +103,7 @@ public class ContainerLiquefier extends Container {
 				}
 				slot.onSlotChange(itemstack1, itemstack);
 			} else if (par2 != 1 && par2 != 0) {
-				if (FurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null) {
+				if (LiquefierRecipes.smelting().getSmeltingResult(itemstack1) != null) {
 					if (!this.mergeItemStack(itemstack1, 0, 1, false)) {
 						return null;
 					}

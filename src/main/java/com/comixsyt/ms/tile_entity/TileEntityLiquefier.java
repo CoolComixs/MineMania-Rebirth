@@ -1,6 +1,7 @@
 package com.comixsyt.ms.tile_entity;
 
 import com.comixsyt.ms.block.Liquefier;
+import com.comixsyt.ms.handler.LiquefierRecipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -17,7 +18,7 @@ import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
-import net.minecraft.item.crafting.FurnaceRecipes;
+//import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
@@ -222,7 +223,7 @@ public class TileEntityLiquefier extends TileEntity implements ISidedInventory {
 		if (this.furnaceItemStacks[0] == null) {
 			return false;
 		} else {
-			ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
+			ItemStack itemstack = LiquefierRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
 			if (itemstack == null)
 				return false;
 			if (this.furnaceItemStacks[2] == null)
@@ -236,7 +237,7 @@ public class TileEntityLiquefier extends TileEntity implements ISidedInventory {
 
 	public void smeltItem() {
 		if (this.canSmelt()) {
-			ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
+			ItemStack itemstack = LiquefierRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
 
 			if (this.furnaceItemStacks[2] == null) {
 				this.furnaceItemStacks[2] = itemstack.copy();
