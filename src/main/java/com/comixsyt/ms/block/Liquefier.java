@@ -9,6 +9,7 @@ import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -22,7 +23,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class Liquefier extends Block {
+public class Liquefier extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon top;
@@ -60,12 +61,11 @@ public class Liquefier extends Block {
 
 	}
 
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-        if (!world.isRemote){
-            FMLNetworkHandler.openGui(player, ms.modInstance, 0, world, x, y, z);
-        }
-        return true;
-    }
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7,
+			float par8, float par9) {
+		player.openGui(ms.modInstance, 0, world, x, y, z);
+		return true;
+	}
 
 	public Item getItemDropped(int par1, Random random, int par3) {
 		return Item.getItemFromBlock(ms.Liquefier);
@@ -234,6 +234,11 @@ public class Liquefier extends Block {
 
 		}
 
+	}
+
+	@Override
+	public TileEntity createNewTileEntity(World world, int par2) {
+		return new TileEntityLiquefier();
 	}
 
 }

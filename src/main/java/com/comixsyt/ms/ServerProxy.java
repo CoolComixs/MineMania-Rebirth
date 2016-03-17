@@ -28,7 +28,7 @@ public class ServerProxy {
 
 	public void registerTileEntities(){
 		//GameRegistry.registerTileEntity(TileEntityLiquefier.class, "msTileEntityLiquefier");
-		GameRegistry.registerTileEntity(TileEntityLiquefier.class, "msTileEntityLiquefier");
+		GameRegistry.registerTileEntity(TileEntityLiquefier.class, "TileEntityLiquefier");
 		
 		
 	}
