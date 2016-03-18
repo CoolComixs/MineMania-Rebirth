@@ -534,12 +534,13 @@ public class ms {
 	}
 
 	public static void oreDictionary() {
-		OreDictionary.registerOre("gemDiamondium", Diamondium);
-		OreDictionary.registerOre("ingotDiamondium", Diamondium);
-		OreDictionary.registerOre("nuggetDiamond", DiamondiumN);
-		OreDictionary.registerOre("oreUltimatium", UltimatiumOre);
-		OreDictionary.registerOre("gemUltimatium", Ultimatium);
-		OreDictionary.registerOre("ingotUltimatium", Ultimatium);
+		OreDictionary.registerOre("gemDiamondium", new ItemStack(Diamondium));
+		OreDictionary.registerOre("ingotDiamondium", new ItemStack(Diamondium));
+		OreDictionary.registerOre("nuggetDiamond", new ItemStack(DiamondiumN));
+		OreDictionary.registerOre("oreUltimatium", new ItemStack(UltimatiumOre));
+		OreDictionary.registerOre("gemUltimatium", new ItemStack(Ultimatium));
+		OreDictionary.registerOre("ingotUltimatium", new ItemStack(Ultimatium));
+		OreDictionary.registerOre("ingotIron", new ItemStack(mIron));
 
 	}
 
