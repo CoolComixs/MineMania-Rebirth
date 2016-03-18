@@ -390,7 +390,7 @@ public class ms {
 
 		UltimatiumHelm = new Ultimatiumarmor(UltimatiumA, 0, 0).setUnlocalizedName("UltimatiumHelm")
 				.setTextureName("ms:Ultimatium_helm").setCreativeTab(tabMSA);
-		UltimatiumChest = new Ultimatiumarmor(UltimatiumA, 0, 1).setUnlocalizedName("UltimatiumUltimatiumest")
+		UltimatiumChest = new Ultimatiumarmor(UltimatiumA, 0, 1).setUnlocalizedName("UltimatiumChest")
 				.setTextureName("ms:Ultimatium_Ultimatiumest").setCreativeTab(tabMSA);
 		UltimatiumLegs = new Ultimatiumarmor(UltimatiumA, 0, 2).setUnlocalizedName("UltimatiumLegs")
 				.setTextureName("ms:Ultimatium_legs").setCreativeTab(tabMSA);
