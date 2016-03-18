@@ -103,6 +103,7 @@ public class ms {
 
 	// Items
 	public static Item hRoot;
+	public static Item mIron;
 
 	public static Item Diamondium;
 	public static Item DiamondiumN;
@@ -247,15 +248,6 @@ public class ms {
 		GameRegistry.registerItem(potHoe, potHoe.getUnlocalizedName());
 		GameRegistry.registerItem(potAxe, potAxe.getUnlocalizedName());
 
-		// pothelm = new
-		// pothelm(potMaterialA).setUnlocalizedName("pothelm").setTextureName("ms:pothelm").setCreativeTab(tabMSA);
-		// potchest = new
-		// potchest(potMaterialA).setUnlocalizedName("potchest").setTextureName("ms:potshovel").setCreativeTab(tabMSA);
-		// potlegs = new
-		// potlegs(potMaterialA).setUnlocalizedName("potlegs").setTextureName("ms:pothoe").setCreativeTab(tabMSA);
-		// potboots = new
-		// potboots(potMaterialA).setUnlocalizedName("potboots").setTextureName("ms:potaxe").setCreativeTab(tabMSA);
-
 		pothelm = new potarmor(potMaterialA, 0, 0).setUnlocalizedName("pothelm").setTextureName("ms:pothelm")
 				.setCreativeTab(tabMSA);
 		potchest = new potarmor(potMaterialA, 0, 1).setUnlocalizedName("potchest").setTextureName("ms:potchest")
@@ -288,6 +280,9 @@ public class ms {
 		// Lone Items
 		hRoot = new hRoot(1, 0.5F, false).setUnlocalizedName("hRoot").setTextureName("ms:hRoot").setCreativeTab(tabMSI);
 		GameRegistry.registerItem(hRoot, hRoot.getUnlocalizedName());
+
+		mIron = new Item().setUnlocalizedName("mIron").setTextureName("ms:mIron").setCreativeTab(tabMSI);
+		GameRegistry.registerItem(mIron, mIron.getUnlocalizedName());
 
 		Liquefier = new Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
 		LiquefierActive = new Liquefier(true).setBlockName("LiquefierActive");
@@ -519,15 +514,15 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(NRhoe),
 				new Object[] { "DD ", " S ", " S ", 'D', Blocks.netherrack, 'S', Items.blaze_rod });
 
-		// ChainLeather (also Chainmail)
-		GameRegistry.addRecipe(new ItemStack(CHHelm),
-				new Object[] { "III", "ILI", "III", 'I', Items.iron_ingot, 'L', Items.leather_helmet });
-		GameRegistry.addRecipe(new ItemStack(CHChest),
-				new Object[] { "III", "ILI", "III", 'I', Items.iron_ingot, 'L', Items.leather_chestplate });
-		GameRegistry.addRecipe(new ItemStack(CHLegs),
-				new Object[] { "III", "ILI", "III", 'I', Items.iron_ingot, 'L', Items.leather_leggings });
-		GameRegistry.addRecipe(new ItemStack(CHBoots),
-				new Object[] { "III", "ILI", "III", 'I', Items.iron_ingot, 'L', Items.leather_boots });
+		// ChainLeather
+		GameRegistry.addShapelessRecipe(new ItemStack(CHHelm),
+				new Object[] { Items.leather_helmet, new ItemStack(mIron), new ItemStack(mIron) });
+		GameRegistry.addShapelessRecipe(new ItemStack(CHChest),
+				new Object[] { Items.leather_chestplate, new ItemStack(mIron), new ItemStack(mIron) });
+		GameRegistry.addShapelessRecipe(new ItemStack(CHLegs),
+				new Object[] { Items.leather_leggings, new ItemStack(mIron), new ItemStack(mIron) });
+		GameRegistry.addShapelessRecipe(new ItemStack(CHBoots),
+				new Object[] { Items.leather_boots, new ItemStack(mIron), new ItemStack(mIron) });
 
 		// Ultimatium
 		GameRegistry.addRecipe(new ItemStack(UltimatiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ultimatium });

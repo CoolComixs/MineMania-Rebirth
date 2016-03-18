@@ -27,6 +27,7 @@ public class LiquefierRecipes {
 		//this.addRecipie(Item.getItemFromBlock(INPUT), new ItemStack(OUTPUT),XPFLOAT);
 		//Bellow was a test, disregard it.
 		//this.addRecipie(ms.Diamondium, new ItemStack(Items.diamond), 0.8f);
+		this.addRecipie(Items.iron_ingot, new ItemStack(ms.mIron), 0.8F);
 		
 	}
 
