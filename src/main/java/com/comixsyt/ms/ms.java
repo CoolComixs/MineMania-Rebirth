@@ -62,7 +62,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
-@Mod(modid = "ms", name = "MineMania: Rebirth", version = "1.0")
+@Mod(modid = "ms", name = "MineMania: Rebirth", version = "1.1")
 public class ms {
 
 	@SidedProxy(clientSide = "com.comixsyt.ms.ClientProxy", serverSide = "com.comixsyt.ms.ServerProxy")
@@ -535,6 +535,33 @@ public class ms {
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.blaze_rod),
 				new Object[] { Items.stick, new ItemStack(Items.blaze_powder) });
+
+		// From Mo' Recipies mod (old mod I made)
+
+		GameRegistry.addRecipe(new ItemStack(Blocks.grass),
+				new Object[] { " DS", " SS", 'D', Blocks.dirt, 'S', Items.wheat_seeds });
+		GameRegistry.addRecipe(new ItemStack(Items.experience_bottle, 4),
+				new Object[] { "BBB", "BDB", "BBB", 'B', Blocks.bookshelf, 'D', Items.diamond });
+		GameRegistry.addRecipe(new ItemStack(Items.saddle),
+				new Object[] { "LLL", "LIL", "S S", 'L', Items.leather, 'I', Items.iron_ingot, 'S', Items.lead });
+		GameRegistry.addRecipe(new ItemStack(Items.saddle),
+				new Object[] { "LLL", "LIL", "S S", 'L', Items.leather, 'I', Items.iron_ingot, 'S', Items.string });
+		GameRegistry.addRecipe(new ItemStack(Blocks.sponge), new Object[] { "WFW", "FWF", "WBW", 'W', Blocks.wool, 'F',
+				Blocks.yellow_flower, 'B', Items.water_bucket });
+		GameRegistry.addRecipe(new ItemStack(Items.iron_horse_armor),
+				new Object[] { "III", "III", "I I", 'I', Items.iron_ingot });
+		GameRegistry.addRecipe(new ItemStack(Items.golden_horse_armor),
+				new Object[] { "III", "III", "I I", 'I', Items.gold_ingot });
+		GameRegistry.addRecipe(new ItemStack(Items.diamond_horse_armor),
+				new Object[] { "III", "III", "I I", 'I', Items.diamond });
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.name_tag),
+				new Object[] { Items.paper, new ItemStack(Items.string), new ItemStack(Items.iron_ingot) });
+		GameRegistry.addRecipe(new ItemStack(Blocks.web, 5), new Object[] { "III", "III", "III", 'I', Items.string });
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.quartz, 4), new Object[] { Blocks.quartz_block });
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.mossy_cobblestone),
+				new Object[] { Blocks.cobblestone, new ItemStack(Blocks.vine) });
+		GameRegistry.addRecipe(new ItemStack(Blocks.packed_ice), new Object[] { "III", "III", "III", 'I', Blocks.ice });
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ice, 9), new Object[] { Blocks.packed_ice });
 
 	}
 
