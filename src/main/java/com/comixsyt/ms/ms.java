@@ -2,6 +2,7 @@ package com.comixsyt.ms;
 
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Liquefier;
+import com.comixsyt.ms.block.Grinder;
 import com.comixsyt.ms.block.UltimatiumBlock;
 import com.comixsyt.ms.block.UltimatiumOre;
 import com.comixsyt.ms.handler.GuiHandler;
@@ -152,6 +153,9 @@ public class ms {
 
 	public static Block Liquefier;
 	public static Block LiquefierActive;
+	
+	public static Block Grinder;
+	public static Block GrinderActive;
 
 	// public static Item bonePic;
 	// public static Item nrPic;
@@ -289,6 +293,14 @@ public class ms {
 
 		GameRegistry.registerBlock(Liquefier, Liquefier.getUnlocalizedName());
 		GameRegistry.registerBlock(LiquefierActive, LiquefierActive.getUnlocalizedName());
+		
+		Grinder = new Grinder(false).setBlockName("Grinder").setCreativeTab(tabMSB);
+		GrinderActive = new Grinder(true).setBlockName("GrinderActive");
+
+		GameRegistry.registerBlock(Grinder, Grinder.getUnlocalizedName());
+		GameRegistry.registerBlock(GrinderActive, GrinderActive.getUnlocalizedName());
+		
+		
 
 		// Diamondium
 

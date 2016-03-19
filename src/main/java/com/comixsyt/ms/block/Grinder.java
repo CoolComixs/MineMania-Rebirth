@@ -3,7 +3,7 @@ package com.comixsyt.ms.block;
 import java.util.Random;
 
 import com.comixsyt.ms.ms;
-import com.comixsyt.ms.tile_entity.TileEntityLiquefier;
+import com.comixsyt.ms.tile_entity.TileEntityGrinder;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,7 +24,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class Liquefier extends BlockContainer {
+public class Grinder extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon top;
@@ -35,7 +35,7 @@ public class Liquefier extends BlockContainer {
 	private final boolean isBurning2;
 	private final Random random = new Random();
 
-	public Liquefier(boolean isActive) {
+	public Grinder(boolean isActive) {
 		super(Material.rock);
 		isBurning2 = isActive;
 		//this.rotateBlock(null, x, y, z, axis)
@@ -93,11 +93,11 @@ public class Liquefier extends BlockContainer {
 	}
 
 	public Item getItemDropped(int par1, Random random, int par3) {
-		return Item.getItemFromBlock(ms.Liquefier);
+		return Item.getItemFromBlock(ms.Grinder);
 	}
 
 	public Item getItem(World world, int par2, int par3, int par4) {
-		return Item.getItemFromBlock(ms.Liquefier);
+		return Item.getItemFromBlock(ms.Grinder);
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class Liquefier extends BlockContainer {
 	 * the block.
 	 */
 	public TileEntity createNewTileEntity(World world, int par2) {
-		return new TileEntityLiquefier();
+		return new TileEntityGrinder();
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -142,59 +142,6 @@ public class Liquefier extends BlockContainer {
 		}
 	}
 
-/*	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack) {
-		int direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
-
-		if (direction == 0) {
-			world.setBlockMetadataWithNotify(x, y, z, 2, 2);
-		}
-
-		if (direction == 1) {
-			world.setBlockMetadataWithNotify(x, y, z, 5, 2);
-		}
-
-		if (direction == 2) {
-			world.setBlockMetadataWithNotify(x, y, z, 3, 2);
-		}
-
-		if (direction == 3) {
-			world.setBlockMetadataWithNotify(x, y, z, 4, 2);
-		}
-
-		if (itemstack.hasDisplayName()) {
-			((TileEntityLiquefier) world.getTileEntity(x, y, z)).furnaceName(itemstack.getDisplayName());
-		}
-	}*/
-	
-/*    public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemstack)
-    {
-        int l = MathHelper.floor_double((double)(entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
-
-        if (l == 0)
-        {
-            world.setBlockMetadataWithNotify(x, y, z, 2, 2);
-        }
-
-        if (l == 1)
-        {
-            world.setBlockMetadataWithNotify(x, y, z, 5, 2);
-        }
-
-        if (l == 2)
-        {
-            world.setBlockMetadataWithNotify(x, y, z, 3, 2);
-        }
-
-        if (l == 3)
-        {
-            world.setBlockMetadataWithNotify(x, y, z, 4, 2);
-        }
-
-        if (itemstack.hasDisplayName())
-        {
-            ((TileEntityFurnace)world.getTileEntity(x, y, z)).func_145951_a(itemstack.getDisplayName());
-        }
-    }*/
 
     @Override
     public void onBlockPlacedBy(World world, int i, int j, int k, EntityLivingBase entityliving, ItemStack itemStack)
@@ -217,10 +164,10 @@ public class Liquefier extends BlockContainer {
         {
             chestFacing = 4;
         }
-        TileEntity TileEntityLiquefier = world.getTileEntity(i, j, k);
-        if (TileEntityLiquefier != null && TileEntityLiquefier instanceof TileEntityLiquefier)
+        TileEntity TileEntityGrinder = world.getTileEntity(i, j, k);
+        if (TileEntityGrinder != null && TileEntityGrinder instanceof TileEntityGrinder)
         {
-            TileEntityLiquefier teic = (TileEntityLiquefier) TileEntityLiquefier;
+            TileEntityGrinder teic = (TileEntityGrinder) TileEntityGrinder;
             teic.wasPlaced(entityliving, itemStack);
             teic.setFacing(chestFacing);
             world.markBlockForUpdate(i, j, k);
@@ -228,14 +175,6 @@ public class Liquefier extends BlockContainer {
     }
 	
 	
-/*	@Override
-	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack stack) {
-		if(entity==null){
-			return;
-		}
-		TileEntityLiquefier tile =(TileEntityLiquefier) world.getTileEntity(x, y, z);
-		tile.direction = MathHelper.floor_double((double) (entity.rotationYaw * 4.0F / 360) + 0.5D) & 3;
-	}*/
 	
 	public static void updateBlockState(boolean burning, World world, int x, int y, int z) {
 		int direction = world.getBlockMetadata(x, y, z);
@@ -243,9 +182,9 @@ public class Liquefier extends BlockContainer {
 		isBurning = true;
 
 		if (burning) {
-			world.setBlock(x, y, z, ms.LiquefierActive);
+			world.setBlock(x, y, z, ms.GrinderActive);
 		} else {
-			world.setBlock(x, y, z, ms.Liquefier);
+			world.setBlock(x, y, z, ms.Grinder);
 		}
 
 		isBurning = false;
@@ -259,11 +198,11 @@ public class Liquefier extends BlockContainer {
 
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
 		if (!isBurning) {
-			TileEntityLiquefier tileentitygrinder = (TileEntityLiquefier) world.getTileEntity(x, y, z);
+			TileEntityGrinder tileentitytutfurnace = (TileEntityGrinder) world.getTileEntity(x, y, z);
 
-			if (tileentitygrinder != null) {
-				for (int i = 0; i < tileentitygrinder.getSizeInventory(); ++i) {
-					ItemStack itemstack = tileentitygrinder.getStackInSlot(i);
+			if (tileentitytutfurnace != null) {
+				for (int i = 0; i < tileentitytutfurnace.getSizeInventory(); ++i) {
+					ItemStack itemstack = tileentitytutfurnace.getStackInSlot(i);
 
 					if (itemstack != null) {
 						float f = this.random.nextFloat() * 0.6F + 0.1F;

@@ -1,7 +1,10 @@
 package com.comixsyt.ms.handler;
 
+import com.comixsyt.ms.gui.GuiGrinder;
 import com.comixsyt.ms.gui.GuiLiquefier;
+import com.comixsyt.ms.inventory.ContainerGrinder;
 import com.comixsyt.ms.inventory.ContainerLiquefier;
+import com.comixsyt.ms.tile_entity.TileEntityGrinder;
 import com.comixsyt.ms.tile_entity.TileEntityLiquefier;
 
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -17,7 +20,10 @@ public class GuiHandler implements IGuiHandler {
 			TileEntityLiquefier tileEntityFurnace = (TileEntityLiquefier) world.getTileEntity(x, y, z);
 			return new ContainerLiquefier(player.inventory, tileEntityFurnace);
 		}
-
+		if(ID == 1){
+			TileEntityGrinder tileEntityFurnace = (TileEntityGrinder) world.getTileEntity(x, y, z);
+			return new ContainerGrinder(player.inventory, tileEntityFurnace);
+		}
 		return null;
 	}
 
@@ -27,6 +33,10 @@ public class GuiHandler implements IGuiHandler {
 		if(ID == 0){
 			TileEntityLiquefier tileEntityTestContainer = (TileEntityLiquefier) world.getTileEntity(x, y, z);
 			return new GuiLiquefier(player.inventory, tileEntityTestContainer);
+		}
+		if(ID == 1){
+			TileEntityGrinder tileEntityTestContainer2 = (TileEntityGrinder) world.getTileEntity(x, y, z);
+			return new GuiGrinder(player.inventory, tileEntityTestContainer2);
 		}
 		return null;
 	}
