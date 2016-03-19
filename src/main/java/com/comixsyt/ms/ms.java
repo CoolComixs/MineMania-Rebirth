@@ -157,10 +157,6 @@ public class ms {
 	public static Block Grinder;
 	public static Block GrinderActive;
 
-	// public static Item bonePic;
-	// public static Item nrPic;
-	// public static Item quartzpic;
-	// public static Item woolpic;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -234,6 +230,7 @@ public class ms {
 		GameRegistry.registerItem(glassHoe, glassHoe.getUnlocalizedName());
 		GameRegistry.registerItem(glassAxe, glassAxe.getUnlocalizedName());
 
+		
 		// potato
 		potPic = new potPic(potMaterial).setUnlocalizedName("potPickaxe").setTextureName("ms:potpic")
 				.setCreativeTab(tabMST);

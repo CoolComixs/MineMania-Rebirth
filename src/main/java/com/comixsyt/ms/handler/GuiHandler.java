@@ -35,8 +35,8 @@ public class GuiHandler implements IGuiHandler {
 			return new GuiLiquefier(player.inventory, tileEntityTestContainer);
 		}
 		if(ID == 1){
-			TileEntityGrinder tileEntityTestContainer2 = (TileEntityGrinder) world.getTileEntity(x, y, z);
-			return new GuiGrinder(player.inventory, tileEntityTestContainer2);
+			TileEntityGrinder tileEntityTestContainer = (TileEntityGrinder) world.getTileEntity(x, y, z);
+			return new GuiGrinder(player.inventory, tileEntityTestContainer);
 		}
 		return null;
 	}
