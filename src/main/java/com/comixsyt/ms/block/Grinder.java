@@ -70,9 +70,9 @@ public class Grinder extends BlockContainer {
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconregister) {
-		this.blockIcon = iconregister.registerIcon(this.isBurning2 ? "ms:l_on" : "ms:l_off");
-		this.front = iconregister.registerIcon(this.isBurning2 ? "ms:l_on" : "ms:l_off");
-		this.top = iconregister.registerIcon(this.isBurning2 ? "ms:l_on" : "ms:l_off");
+		this.blockIcon = iconregister.registerIcon(this.isBurning2 ? "ms:grinder_on" : "ms:grinder_off");
+		this.front = iconregister.registerIcon(this.isBurning2 ? "ms:grinder_on" : "ms:grinder_off");
+		this.top = iconregister.registerIcon(this.isBurning2 ? "ms:grinder_on" : "ms:grinder_off");
 
 	}
 
