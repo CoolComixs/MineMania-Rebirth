@@ -26,6 +26,7 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityGrinder extends TileEntity implements ISidedInventory {
 
+	
 	public int direction;
 	
 	private static final int[] slotsTop = new int[] { 0 };

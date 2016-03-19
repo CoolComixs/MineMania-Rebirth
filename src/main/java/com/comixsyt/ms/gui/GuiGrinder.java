@@ -21,8 +21,10 @@ public class GuiGrinder extends GuiContainer {
 
 	}
 
+	
+	
 	private static final ResourceLocation furnaceGuiTextures = new ResourceLocation(
-			"ms:textures/gui/grinder_.png");
+			"ms:textures/gui/grinder_gui.png");
 	private TileEntityGrinder tileFurnace;
 
 	@Override
