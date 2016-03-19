@@ -153,10 +153,9 @@ public class ms {
 
 	public static Block Liquefier;
 	public static Block LiquefierActive;
-	
+
 	public static Block Grinder;
 	public static Block GrinderActive;
-
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -230,7 +229,6 @@ public class ms {
 		GameRegistry.registerItem(glassHoe, glassHoe.getUnlocalizedName());
 		GameRegistry.registerItem(glassAxe, glassAxe.getUnlocalizedName());
 
-		
 		// potato
 		potPic = new potPic(potMaterial).setUnlocalizedName("potPickaxe").setTextureName("ms:potpic")
 				.setCreativeTab(tabMST);
@@ -290,14 +288,12 @@ public class ms {
 
 		GameRegistry.registerBlock(Liquefier, Liquefier.getUnlocalizedName());
 		GameRegistry.registerBlock(LiquefierActive, LiquefierActive.getUnlocalizedName());
-		
+
 		Grinder = new Grinder(false).setBlockName("Grinder").setCreativeTab(tabMSB);
 		GrinderActive = new Grinder(true).setBlockName("GrinderActive");
 
 		GameRegistry.registerBlock(Grinder, Grinder.getUnlocalizedName());
 		GameRegistry.registerBlock(GrinderActive, GrinderActive.getUnlocalizedName());
-		
-		
 
 		// Diamondium
 
