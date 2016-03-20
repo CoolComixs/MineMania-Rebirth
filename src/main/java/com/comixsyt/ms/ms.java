@@ -1,9 +1,10 @@
 package com.comixsyt.ms;
 
 import com.comixsyt.ms.block.DiamondiumBlock;
-import com.comixsyt.ms.block.RubyOre;
-import com.comixsyt.ms.block.Liquefier;
 import com.comixsyt.ms.block.Grinder;
+import com.comixsyt.ms.block.Liquefier;
+import com.comixsyt.ms.block.RubyBlock;
+import com.comixsyt.ms.block.RubyOre;
 import com.comixsyt.ms.block.UltimatiumBlock;
 import com.comixsyt.ms.block.UltimatiumOre;
 import com.comixsyt.ms.handler.GuiHandler;
@@ -172,6 +173,7 @@ public class ms {
 
 	public static Item Ruby;
 	public static Block RubyOre;
+	public static Block RubyBlock;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -405,7 +407,6 @@ public class ms {
 		GameRegistry.registerBlock(UltimatiumOre, UltimatiumOre.getUnlocalizedName());
 
 		GameRegistry.registerWorldGenerator(new UOreGeneration(), 0);
-		
 
 		GameRegistry.registerItem(Ultimatium, Ultimatium.getUnlocalizedName());
 
@@ -453,9 +454,7 @@ public class ms {
 				.setCreativeTab(tabMSI);
 		ultimatiumDust = new Item().setUnlocalizedName("ultimatiumDust").setTextureName("ms:ultimatiumDust")
 				.setCreativeTab(tabMSI);
-		rubyDust = new Item().setUnlocalizedName("rubyDust").setTextureName("ms:rubyDust")
-				.setCreativeTab(tabMSI);
-		
+		rubyDust = new Item().setUnlocalizedName("rubyDust").setTextureName("ms:rubyDust").setCreativeTab(tabMSI);
 
 		GameRegistry.registerItem(coalDust, coalDust.getUnlocalizedName());
 		GameRegistry.registerItem(ironDust, ironDust.getUnlocalizedName());
@@ -466,15 +465,17 @@ public class ms {
 		GameRegistry.registerItem(ultimatiumDust, ultimatiumDust.getUnlocalizedName());
 		GameRegistry.registerItem(rubyDust, rubyDust.getUnlocalizedName());
 
-
 		Ruby = new Item().setUnlocalizedName("Ruby").setTextureName("ms:Ruby").setCreativeTab(tabMSI);
 		RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
+				.setCreativeTab(tabMSB);
+		RubyBlock = new RubyBlock(Material.rock).setBlockName("RubyBlock").setBlockTextureName("ms:RubyBlock")
 				.setCreativeTab(tabMSB);
 
 		GameRegistry.registerItem(Ruby, Ruby.getUnlocalizedName());
 		GameRegistry.registerBlock(RubyOre, RubyOre.getUnlocalizedName());
-		
+		GameRegistry.registerBlock(RubyBlock, RubyBlock.getUnlocalizedName());
 
+		
 	}
 
 	@EventHandler
@@ -572,8 +573,6 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(DiamondiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Diamondium });
 		GameRegistry.addShapelessRecipe(new ItemStack(Diamondium, 9), new Object[] { DiamondiumBlock });
 
-		
-		
 		// NetherRack
 		GameRegistry.addRecipe(new ItemStack(NRpic),
 				new Object[] { "DDD", " S ", " S ", 'D', Blocks.netherrack, 'S', Items.blaze_rod });
@@ -639,7 +638,10 @@ public class ms {
 		GameRegistry.addSmelting(ultimatiumDust, new ItemStack(Ultimatium), 0.8F);
 		GameRegistry.addSmelting(rubyDust, new ItemStack(Ruby), 0.8F);
 
-
+		GameRegistry.addRecipe(new ItemStack(RubyBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ruby });
+		GameRegistry.addShapelessRecipe(new ItemStack(Ruby, 9), new Object[] { RubyBlock });
+		
+		
 	}
 
 	public static void oreDictionary() {
@@ -659,10 +661,6 @@ public class ms {
 		OreDictionary.registerOre("dustRuby", new ItemStack(rubyDust));
 		OreDictionary.registerOre("gemRuby", new ItemStack(Ruby));
 		OreDictionary.registerOre("oreRuby", new ItemStack(RubyOre));
-
-
-
-
 
 	}
 

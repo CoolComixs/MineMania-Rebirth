@@ -81,6 +81,11 @@ item.emeraldDust.name=Emerald Dust
 item.diamondDust.name=Diamond Dust
 item.ultimatiumDust.name=Ultimatium Dust
 item.diamondiumDust.name=Diamondium Dust
+item.rubyDust.name=Ruby Dust
+
+item.Ruby.name=Ruby
+tile.RubyOre.name=Ruby Ore
+tile.RubyBlock.name=Block of Ruby
 
 
 
