@@ -610,6 +610,20 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(Blocks.packed_ice), new Object[] { "III", "III", "III", 'I', Blocks.ice });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ice, 9), new Object[] { Blocks.packed_ice });
 
+		
+		GameRegistry.addSmelting(coalDust, new ItemStack(Items.coal), 0.8F);
+		GameRegistry.addSmelting(ironDust, new ItemStack(Items.iron_ingot), 0.8F);
+		GameRegistry.addSmelting(goldDust, new ItemStack(Items.gold_ingot), 0.8F);
+		GameRegistry.addSmelting(diamondDust, new ItemStack(Items.diamond), 0.8F);
+		GameRegistry.addSmelting(diamondiumDust, new ItemStack(Diamondium), 0.8F);
+		GameRegistry.addSmelting(ultimatiumDust, new ItemStack(Ultimatium), 0.8F);
+
+
+		
+		
+		
+		
+		
 	}
 
 	public static void oreDictionary() {
