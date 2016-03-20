@@ -72,8 +72,16 @@ item.mIron.name=Molten Iron
 item.iRod.name=Iron Rod
 item.cBlade.name=Circular Blade
 item.Bladecombo.name=Circular Blade Combo
-
 tile.Grinder.name=Grinder
+
+item.coalDust.name=Coal Dust
+item.ironDust.name=Iron Dust
+item.goldDust.name=Gold Dust
+item.emeraldDust.name=Emerald Dust
+item.diamondDust.name=Diamond Dust
+item.ultimatiumDust.name=Ultimatium Dust
+item.diamondiumDust.name=Diamondium Dust
+
 
 
 

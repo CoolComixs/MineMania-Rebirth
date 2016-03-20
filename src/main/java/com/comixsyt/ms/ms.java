@@ -159,6 +159,17 @@ public class ms {
 	public static Item cBlade;
 	public static Item iRod;
 	public static Item Bladecombo;
+	
+	public static Item ironDust;
+	public static Item goldDust;
+	public static Item diamondDust;
+	public static Item emeraldDust;
+	public static Item diamondiumDust;
+	public static Item ultimatiumDust;
+	public static Item coalDust;
+
+
+
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -428,6 +439,25 @@ public class ms {
 		GameRegistry.registerItem(Ultimatiumhoe, Ultimatiumhoe.getUnlocalizedName());
 		GameRegistry.registerItem(Ultimatiumaxe, Ultimatiumaxe.getUnlocalizedName());
 
+		
+		coalDust = new Item().setUnlocalizedName("coalDust").setTextureName("ms:coalDust").setCreativeTab(tabMSI);
+		ironDust = new Item().setUnlocalizedName("ironDust").setTextureName("ms:ironDust").setCreativeTab(tabMSI);
+		goldDust = new Item().setUnlocalizedName("goldDust").setTextureName("ms:goldDust").setCreativeTab(tabMSI);
+		diamondDust = new Item().setUnlocalizedName("diamondDust").setTextureName("ms:diamondDust").setCreativeTab(tabMSI);
+		emeraldDust = new Item().setUnlocalizedName("emeraldDust").setTextureName("ms:emeraldDust").setCreativeTab(tabMSI);
+		diamondiumDust = new Item().setUnlocalizedName("diamondiumDust").setTextureName("ms:diamondiumDust").setCreativeTab(tabMSI);
+		ultimatiumDust = new Item().setUnlocalizedName("ultimatiumDust").setTextureName("ms:ultimatiumDust").setCreativeTab(tabMSI);
+
+		GameRegistry.registerItem(coalDust, coalDust.getUnlocalizedName());
+		GameRegistry.registerItem(ironDust, ironDust.getUnlocalizedName());
+		GameRegistry.registerItem(goldDust, goldDust.getUnlocalizedName());
+		GameRegistry.registerItem(diamondDust, diamondDust.getUnlocalizedName());
+		GameRegistry.registerItem(emeraldDust, emeraldDust.getUnlocalizedName());
+		GameRegistry.registerItem(diamondiumDust, diamondiumDust.getUnlocalizedName());
+		GameRegistry.registerItem(ultimatiumDust, ultimatiumDust.getUnlocalizedName());
+
+		
+		
 	}
 
 	@EventHandler
@@ -590,6 +620,13 @@ public class ms {
 		OreDictionary.registerOre("gemUltimatium", new ItemStack(Ultimatium));
 		OreDictionary.registerOre("ingotUltimatium", new ItemStack(Ultimatium));
 		OreDictionary.registerOre("ingotIron", new ItemStack(mIron));
+		OreDictionary.registerOre("dustIron", new ItemStack(ironDust));
+		OreDictionary.registerOre("dustGold", new ItemStack(goldDust));
+		OreDictionary.registerOre("dustDiamond", new ItemStack(diamondDust));
+		OreDictionary.registerOre("dustEmerald", new ItemStack(emeraldDust));
+		OreDictionary.registerOre("dustUltimatium", new ItemStack(ultimatiumDust));
+		OreDictionary.registerOre("dustDiamondium", new ItemStack(diamondiumDust));
+
 
 	}
 

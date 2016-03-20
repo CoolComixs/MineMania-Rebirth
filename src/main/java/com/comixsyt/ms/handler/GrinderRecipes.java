@@ -7,6 +7,7 @@ import java.util.Map.Entry;
 
 import com.comixsyt.ms.ms;
 
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,7 +28,22 @@ public class GrinderRecipes {
 		//this.addRecipie(Item.getItemFromBlock(INPUT), new ItemStack(OUTPUT),XPFLOAT);
 		//Bellow was a test, disregard it.
 		//this.addRecipie(ms.Diamondium, new ItemStack(Items.diamond), 0.8f);
-		//this.addRecipie(Items.iron_ingot, new ItemStack(ms.mIron), 0.8F);
+		this.addRecipie(Items.coal, new ItemStack(ms.coalDust), 0.8F);
+		this.addRecipie(Items.iron_ingot, new ItemStack(ms.ironDust), 0.8F);
+		this.addRecipie(Items.gold_ingot, new ItemStack(ms.goldDust), 0.8F);
+		this.addRecipie(Items.diamond, new ItemStack(ms.diamondDust), 0.8F);
+		this.addRecipie(Items.emerald, new ItemStack(ms.emeraldDust), 0.8F);
+		this.addRecipie(ms.Diamondium, new ItemStack(ms.diamondiumDust), 0.8F);
+		this.addRecipie(ms.Ultimatium, new ItemStack(ms.ultimatiumDust), 0.8F);
+		
+		this.addRecipie(Item.getItemFromBlock(Blocks.coal_ore), new ItemStack(ms.coalDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(Blocks.iron_ore), new ItemStack(ms.ironDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(Blocks.gold_ore), new ItemStack(ms.ironDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(Blocks.diamond_ore), new ItemStack(ms.ironDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(Blocks.emerald_ore), new ItemStack(ms.ironDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(ms.UltimatiumOre), new ItemStack(ms.ironDust, 2), 0.8F);
+
+
 		
 	}
 
