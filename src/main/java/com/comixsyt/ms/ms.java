@@ -294,9 +294,9 @@ public class ms {
 
 		Grinder = new Grinder(false).setBlockName("Grinder").setCreativeTab(tabMSB);
 		GrinderActive = new Grinder(true).setBlockName("GrinderActive");
-		cBlade = new Item().setUnlocalizedName("cBlade").setTextureName("cBlade").setCreativeTab(tabMSI);
-		iRod = new Item().setUnlocalizedName("iRod").setTextureName("iRod").setCreativeTab(tabMSI);
-		Bladecombo = new Item().setUnlocalizedName("Bladecombo").setTextureName("Bladecombo").setCreativeTab(tabMSI);
+		cBlade = new Item().setUnlocalizedName("cBlade").setTextureName("ms:cBlade").setCreativeTab(tabMSI);
+		iRod = new Item().setUnlocalizedName("iRod").setTextureName("ms:iRod").setCreativeTab(tabMSI);
+		Bladecombo = new Item().setUnlocalizedName("Bladecombo").setTextureName("ms:Bladecombo").setCreativeTab(tabMSI);
 
 		GameRegistry.registerBlock(Grinder, Grinder.getUnlocalizedName());
 		GameRegistry.registerBlock(GrinderActive, GrinderActive.getUnlocalizedName());
