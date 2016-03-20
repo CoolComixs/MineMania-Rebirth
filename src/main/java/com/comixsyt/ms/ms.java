@@ -1,6 +1,7 @@
 package com.comixsyt.ms;
 
 import com.comixsyt.ms.block.DiamondiumBlock;
+import com.comixsyt.ms.block.RubyOre;
 import com.comixsyt.ms.block.Liquefier;
 import com.comixsyt.ms.block.Grinder;
 import com.comixsyt.ms.block.UltimatiumBlock;
@@ -159,7 +160,7 @@ public class ms {
 	public static Item cBlade;
 	public static Item iRod;
 	public static Item Bladecombo;
-	
+
 	public static Item ironDust;
 	public static Item goldDust;
 	public static Item diamondDust;
@@ -168,8 +169,8 @@ public class ms {
 	public static Item ultimatiumDust;
 	public static Item coalDust;
 
-
-
+	public static Item Ruby;
+	public static Block RubyOre;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -403,6 +404,7 @@ public class ms {
 		GameRegistry.registerBlock(UltimatiumOre, UltimatiumOre.getUnlocalizedName());
 
 		GameRegistry.registerWorldGenerator(new UOreGeneration(), 0);
+		
 
 		GameRegistry.registerItem(Ultimatium, Ultimatium.getUnlocalizedName());
 
@@ -439,14 +441,17 @@ public class ms {
 		GameRegistry.registerItem(Ultimatiumhoe, Ultimatiumhoe.getUnlocalizedName());
 		GameRegistry.registerItem(Ultimatiumaxe, Ultimatiumaxe.getUnlocalizedName());
 
-		
 		coalDust = new Item().setUnlocalizedName("coalDust").setTextureName("ms:coalDust").setCreativeTab(tabMSI);
 		ironDust = new Item().setUnlocalizedName("ironDust").setTextureName("ms:ironDust").setCreativeTab(tabMSI);
 		goldDust = new Item().setUnlocalizedName("goldDust").setTextureName("ms:goldDust").setCreativeTab(tabMSI);
-		diamondDust = new Item().setUnlocalizedName("diamondDust").setTextureName("ms:diamondDust").setCreativeTab(tabMSI);
-		emeraldDust = new Item().setUnlocalizedName("emeraldDust").setTextureName("ms:emeraldDust").setCreativeTab(tabMSI);
-		diamondiumDust = new Item().setUnlocalizedName("diamondiumDust").setTextureName("ms:diamondiumDust").setCreativeTab(tabMSI);
-		ultimatiumDust = new Item().setUnlocalizedName("ultimatiumDust").setTextureName("ms:ultimatiumDust").setCreativeTab(tabMSI);
+		diamondDust = new Item().setUnlocalizedName("diamondDust").setTextureName("ms:diamondDust")
+				.setCreativeTab(tabMSI);
+		emeraldDust = new Item().setUnlocalizedName("emeraldDust").setTextureName("ms:emeraldDust")
+				.setCreativeTab(tabMSI);
+		diamondiumDust = new Item().setUnlocalizedName("diamondiumDust").setTextureName("ms:diamondiumDust")
+				.setCreativeTab(tabMSI);
+		ultimatiumDust = new Item().setUnlocalizedName("ultimatiumDust").setTextureName("ms:ultimatiumDust")
+				.setCreativeTab(tabMSI);
 
 		GameRegistry.registerItem(coalDust, coalDust.getUnlocalizedName());
 		GameRegistry.registerItem(ironDust, ironDust.getUnlocalizedName());
@@ -456,8 +461,14 @@ public class ms {
 		GameRegistry.registerItem(diamondiumDust, diamondiumDust.getUnlocalizedName());
 		GameRegistry.registerItem(ultimatiumDust, ultimatiumDust.getUnlocalizedName());
 
+		Ruby = new Item().setUnlocalizedName("Ruby").setTextureName("ms:Ruby").setCreativeTab(tabMSI);
+		RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
+				.setCreativeTab(tabMSB);
+
+		GameRegistry.registerItem(Ruby, Ruby.getUnlocalizedName());
+		GameRegistry.registerBlock(RubyOre, RubyOre.getUnlocalizedName());
 		
-		
+
 	}
 
 	@EventHandler
@@ -610,7 +621,6 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(Blocks.packed_ice), new Object[] { "III", "III", "III", 'I', Blocks.ice });
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ice, 9), new Object[] { Blocks.packed_ice });
 
-		
 		GameRegistry.addSmelting(coalDust, new ItemStack(Items.coal), 0.8F);
 		GameRegistry.addSmelting(ironDust, new ItemStack(Items.iron_ingot), 0.8F);
 		GameRegistry.addSmelting(goldDust, new ItemStack(Items.gold_ingot), 0.8F);
@@ -618,12 +628,6 @@ public class ms {
 		GameRegistry.addSmelting(diamondiumDust, new ItemStack(Diamondium), 0.8F);
 		GameRegistry.addSmelting(ultimatiumDust, new ItemStack(Ultimatium), 0.8F);
 
-
-		
-		
-		
-		
-		
 	}
 
 	public static void oreDictionary() {
@@ -640,7 +644,6 @@ public class ms {
 		OreDictionary.registerOre("dustEmerald", new ItemStack(emeraldDust));
 		OreDictionary.registerOre("dustUltimatium", new ItemStack(ultimatiumDust));
 		OreDictionary.registerOre("dustDiamondium", new ItemStack(diamondiumDust));
-
 
 	}
 
