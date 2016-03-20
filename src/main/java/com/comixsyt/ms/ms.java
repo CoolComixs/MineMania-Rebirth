@@ -168,6 +168,7 @@ public class ms {
 	public static Item diamondiumDust;
 	public static Item ultimatiumDust;
 	public static Item coalDust;
+	public static Item rubyDust;
 
 	public static Item Ruby;
 	public static Block RubyOre;
@@ -452,6 +453,9 @@ public class ms {
 				.setCreativeTab(tabMSI);
 		ultimatiumDust = new Item().setUnlocalizedName("ultimatiumDust").setTextureName("ms:ultimatiumDust")
 				.setCreativeTab(tabMSI);
+		rubyDust = new Item().setUnlocalizedName("rubyDust").setTextureName("ms:rubyDust")
+				.setCreativeTab(tabMSI);
+		
 
 		GameRegistry.registerItem(coalDust, coalDust.getUnlocalizedName());
 		GameRegistry.registerItem(ironDust, ironDust.getUnlocalizedName());
@@ -460,6 +464,8 @@ public class ms {
 		GameRegistry.registerItem(emeraldDust, emeraldDust.getUnlocalizedName());
 		GameRegistry.registerItem(diamondiumDust, diamondiumDust.getUnlocalizedName());
 		GameRegistry.registerItem(ultimatiumDust, ultimatiumDust.getUnlocalizedName());
+		GameRegistry.registerItem(rubyDust, rubyDust.getUnlocalizedName());
+
 
 		Ruby = new Item().setUnlocalizedName("Ruby").setTextureName("ms:Ruby").setCreativeTab(tabMSI);
 		RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
@@ -564,7 +570,10 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(DiamondiumChest), new Object[] { "P P", "PPP", "PPP", 'P', Diamondium });
 		GameRegistry.addRecipe(new ItemStack(DiamondiumBoots), new Object[] { "P P", "P P", 'P', Diamondium });
 		GameRegistry.addRecipe(new ItemStack(DiamondiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Diamondium });
+		GameRegistry.addShapelessRecipe(new ItemStack(Diamondium, 9), new Object[] { DiamondiumBlock });
 
+		
+		
 		// NetherRack
 		GameRegistry.addRecipe(new ItemStack(NRpic),
 				new Object[] { "DDD", " S ", " S ", 'D', Blocks.netherrack, 'S', Items.blaze_rod });
@@ -589,6 +598,7 @@ public class ms {
 
 		// Ultimatium
 		GameRegistry.addRecipe(new ItemStack(UltimatiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ultimatium });
+		GameRegistry.addShapelessRecipe(new ItemStack(Ultimatium, 9), new Object[] { UltimatiumBlock });
 		GameRegistry.addRecipe(new ItemStack(Ultimatium), new Object[] { "PPP", "PPP", "PPP", 'P', Diamondium });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.blaze_rod),
@@ -627,6 +637,8 @@ public class ms {
 		GameRegistry.addSmelting(diamondDust, new ItemStack(Items.diamond), 0.8F);
 		GameRegistry.addSmelting(diamondiumDust, new ItemStack(Diamondium), 0.8F);
 		GameRegistry.addSmelting(ultimatiumDust, new ItemStack(Ultimatium), 0.8F);
+		GameRegistry.addSmelting(rubyDust, new ItemStack(Ruby), 0.8F);
+
 
 	}
 
@@ -644,6 +656,13 @@ public class ms {
 		OreDictionary.registerOre("dustEmerald", new ItemStack(emeraldDust));
 		OreDictionary.registerOre("dustUltimatium", new ItemStack(ultimatiumDust));
 		OreDictionary.registerOre("dustDiamondium", new ItemStack(diamondiumDust));
+		OreDictionary.registerOre("dustRuby", new ItemStack(rubyDust));
+		OreDictionary.registerOre("gemRuby", new ItemStack(Ruby));
+		OreDictionary.registerOre("oreRuby", new ItemStack(RubyOre));
+
+
+
+
 
 	}
 

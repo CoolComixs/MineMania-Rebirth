@@ -35,6 +35,8 @@ public class GrinderRecipes {
 		this.addRecipie(Items.emerald, new ItemStack(ms.emeraldDust), 0.8F);
 		this.addRecipie(ms.Diamondium, new ItemStack(ms.diamondiumDust), 0.8F);
 		this.addRecipie(ms.Ultimatium, new ItemStack(ms.ultimatiumDust), 0.8F);
+		this.addRecipie(ms.Ultimatium, new ItemStack(ms.rubyDust), 0.8F);
+
 		
 		this.addRecipie(Item.getItemFromBlock(Blocks.coal_ore), new ItemStack(ms.coalDust, 2), 0.8F);
 		this.addRecipie(Item.getItemFromBlock(Blocks.iron_ore), new ItemStack(ms.ironDust, 2), 0.8F);
@@ -42,6 +44,7 @@ public class GrinderRecipes {
 		this.addRecipie(Item.getItemFromBlock(Blocks.diamond_ore), new ItemStack(ms.ironDust, 2), 0.8F);
 		this.addRecipie(Item.getItemFromBlock(Blocks.emerald_ore), new ItemStack(ms.ironDust, 2), 0.8F);
 		this.addRecipie(Item.getItemFromBlock(ms.UltimatiumOre), new ItemStack(ms.ironDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(ms.RubyOre), new ItemStack(ms.rubyDust, 2), 0.8F);
 
 
 		
