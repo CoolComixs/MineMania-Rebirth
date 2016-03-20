@@ -156,6 +156,9 @@ public class ms {
 
 	public static Block Grinder;
 	public static Block GrinderActive;
+	public static Item cBlade;
+	public static Item iRod;
+	public static Item Bladecombo;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -291,9 +294,15 @@ public class ms {
 
 		Grinder = new Grinder(false).setBlockName("Grinder").setCreativeTab(tabMSB);
 		GrinderActive = new Grinder(true).setBlockName("GrinderActive");
+		cBlade = new Item().setUnlocalizedName("cBlade").setTextureName("cBlade").setCreativeTab(tabMSI);
+		iRod = new Item().setUnlocalizedName("iRod").setTextureName("iRod").setCreativeTab(tabMSI);
+		Bladecombo = new Item().setUnlocalizedName("Bladecombo").setTextureName("Bladecombo").setCreativeTab(tabMSI);
 
 		GameRegistry.registerBlock(Grinder, Grinder.getUnlocalizedName());
 		GameRegistry.registerBlock(GrinderActive, GrinderActive.getUnlocalizedName());
+		GameRegistry.registerItem(cBlade, cBlade.getUnlocalizedName());
+		GameRegistry.registerItem(iRod, iRod.getUnlocalizedName());
+		GameRegistry.registerItem(Bladecombo, Bladecombo.getUnlocalizedName());
 
 		// Diamondium
 
@@ -432,6 +441,14 @@ public class ms {
 
 		GameRegistry.addRecipe(new ItemStack(Liquefier),
 				new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Items.bucket });
+
+		GameRegistry.addShapelessRecipe(new ItemStack(iRod), new Object[] { mIron, new ItemStack(Items.stick) });
+		GameRegistry.addRecipe(new ItemStack(cBlade), new Object[] { " I ", "I I", " I ", 'I', Items.iron_ingot });
+		GameRegistry.addShapelessRecipe(new ItemStack(Bladecombo),
+				new Object[] { cBlade, new ItemStack(cBlade), new ItemStack(iRod) });
+		GameRegistry.addRecipe(new ItemStack(Grinder),
+				new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Bladecombo });
+
 		// dirt
 		GameRegistry.addRecipe(new ItemStack(itemDirtPic),
 				new Object[] { "DDD", " S ", " S ", 'D', Blocks.dirt, 'S', Items.stick });

@@ -67,8 +67,14 @@ item.UltimatiumLegs.name=Ultimatium Leggings
 item.UltimatiumBoots.name=Ultimatium Boots
 
 tile.Liquefier.name=Liquefier
-tile.Grinder.name=Grinder
 item.mIron.name=Molten Iron
+
+item.iRod.name=Iron Rod
+item.cBlade.name=Circular Blade
+item.Bladecombo.name=Circular Blade Combo
+
+tile.Grinder.name=Grinder
+
 
 
 itemGroup.tabMST=MineMania Tools
