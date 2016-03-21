@@ -1,4 +1,4 @@
-package com.comixsyt.ms;
+package com.comixsyt.ms.item;
 
 import net.minecraft.item.ItemSpade;
 

@@ -1,10 +1,10 @@
-package com.comixsyt.ms;
+package com.comixsyt.ms.item;
 
 import net.minecraft.item.ItemPickaxe;
 
 public class Rubypic extends ItemPickaxe {
 
-	protected Rubypic(ToolMaterial material) {
+	public Rubypic(ToolMaterial material) {
 		super(material);
 		// TODO Auto-generated constructor stub
 	}
