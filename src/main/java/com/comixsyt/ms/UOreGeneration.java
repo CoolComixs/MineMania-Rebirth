@@ -40,7 +40,7 @@ public class UOreGeneration implements IWorldGenerator {
 
 		//generateOre(ORE_BLOCK, world, rand, x, z, MIN_VIEN, MAX_VIEN, CHANCE, MIN_HEIGHT, MAX_HEIGHT, BLOCK_IN);
 		generateOre(ms.UltimatiumOre, world, rand, x, z, 1, 4, 50, 1, 20, Blocks.stone);
-		generateOre(ms.RubyOre, world, rand, x, z, 2, 5, 20, 1, 200, Blocks.stone);
+		generateOre(ms.RubyOre, world, rand, x, z, 1, 8, 3, 1, 30, Blocks.stone);
 		
 	}
 
