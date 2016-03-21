@@ -87,6 +87,26 @@ item.Ruby.name=Ruby
 tile.RubyOre.name=Ruby Ore
 tile.RubyBlock.name=Block of Ruby
 
+item.Rubyaxe.name=Ruby Axe
+item.Rubyhoe.name=Ruby Hoe
+item.Rubypic.name=Ruby Pickaxe
+item.Rubyshovel.name=Ruby Shovel
+item.Rubysword.name=Ruby Sword
+item.Rubyhelm.name=Ruby Helmet
+item.Rubychest.name=Ruby Chestplate
+item.Rubylegs.name=Ruby Leggings
+item.Rubyboots.name=Ruby Boots
+
+item.Emeraldaxe.name=Emerald Axe
+item.Emeraldhoe.name=Emerald Hoe
+item.Emeraldpic.name=Emerald Pickaxe
+item.Emeraldshovel.name=Emerald Shovel
+item.Emeraldsword.name=Emerald Sword
+item.Emeraldhelm.name=Emerald Helmet
+item.Emeraldchest.name=Emerald Chestplate
+item.Emeraldlegs.name=Emerald Leggings
+item.Emeraldboots.name=Emerald Boots
+
 
 
 
