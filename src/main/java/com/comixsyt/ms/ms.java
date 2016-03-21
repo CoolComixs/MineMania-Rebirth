@@ -23,6 +23,7 @@ import com.comixsyt.ms.item.NRhoe;
 import com.comixsyt.ms.item.NRpic;
 import com.comixsyt.ms.item.NRshovel;
 import com.comixsyt.ms.item.NRsword;
+import com.comixsyt.ms.item.Rubyarmor;
 import com.comixsyt.ms.item.Ultimatium;
 import com.comixsyt.ms.item.Ultimatiumarmor;
 import com.comixsyt.ms.item.diamondiumarmor;
@@ -175,6 +176,17 @@ public class ms {
 	public static Block RubyOre;
 	public static Block RubyBlock;
 
+	public static Item Rubypic;
+	public static Item Rubysword;
+	public static Item Rubyhoe;
+	public static Item Rubyshovel;
+	public static Item Rubyaxe;
+
+	public static Item RubyHelm;
+	public static Item RubyChest;
+	public static Item RubyLegs;
+	public static Item RubyBoots;
+
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
 	public static final Item.ToolMaterial glassMaterial = EnumHelper.addToolMaterial("dirtMaterial", 3, 1, 5.0F, 2.5F,
@@ -195,6 +207,11 @@ public class ms {
 			new int[] { 5, 9, 5, 5 }, 18);
 	public static final Item.ToolMaterial UltimatiumT = EnumHelper.addToolMaterial("UltimatiumT", 6, 4999, 14.0F, 5.5F,
 			18);
+
+	public static final Item.ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial", 2, 250, 6.0F, 2.0F,
+			14);
+	public static final ItemArmor.ArmorMaterial RubyA = EnumHelper.addArmorMaterial("RubyA", 15,
+			new int[] { 2, 6, 5, 2 }, 9);
 
 	@Mod.Instance
 	public static ms modInstance;
@@ -475,7 +492,37 @@ public class ms {
 		GameRegistry.registerBlock(RubyOre, RubyOre.getUnlocalizedName());
 		GameRegistry.registerBlock(RubyBlock, RubyBlock.getUnlocalizedName());
 
-		
+		Rubypic = new Rubypic(RubyMaterial).setUnlocalizedName("RubyPickaxe").setTextureName("ms:Ruby_pic")
+				.setCreativeTab(tabMST);
+		Rubysword = new Rubysword(RubyMaterial).setUnlocalizedName("RubySword").setTextureName("ms:Ruby_sword")
+				.setCreativeTab(tabMST);
+		Rubyshovel = new Rubyshovel(RubyMaterial).setUnlocalizedName("RubyShovel").setTextureName("ms:Ruby_shovel")
+				.setCreativeTab(tabMST);
+		Rubyhoe = new Rubyhoe(RubyMaterial).setUnlocalizedName("RubyHoe").setTextureName("ms:Ruby_hoe")
+				.setCreativeTab(tabMST);
+		Rubyaxe = new Rubyaxe(RubyMaterial).setUnlocalizedName("RubyAxe").setTextureName("ms:Ruby_axe")
+				.setCreativeTab(tabMST);
+
+		GameRegistry.registerItem(Rubypic, Rubypic.getUnlocalizedName());
+		GameRegistry.registerItem(Rubysword, Rubysword.getUnlocalizedName());
+		GameRegistry.registerItem(Rubyshovel, Rubyshovel.getUnlocalizedName());
+		GameRegistry.registerItem(Rubyhoe, Rubyhoe.getUnlocalizedName());
+		GameRegistry.registerItem(Rubyaxe, Rubyaxe.getUnlocalizedName());
+
+		RubyHelm = new Rubyarmor(RubyA, 0, 0).setUnlocalizedName("Rubyhelm").setTextureName("ms:Ruby_helm")
+				.setCreativeTab(tabMSA);
+		RubyChest = new Rubyarmor(RubyA, 0, 1).setUnlocalizedName("Rubychest").setTextureName("ms:Ruby_chest")
+				.setCreativeTab(tabMSA);
+		RubyLegs = new Rubyarmor(RubyA, 0, 2).setUnlocalizedName("Rubylegs").setTextureName("ms:Ruby_legs")
+				.setCreativeTab(tabMSA);
+		RubyBoots = new Rubyarmor(RubyA, 0, 3).setUnlocalizedName("Rubyboots").setTextureName("ms:Ruby_boots")
+				.setCreativeTab(tabMSA);
+
+		GameRegistry.registerItem(RubyHelm, RubyHelm.getUnlocalizedName());
+		GameRegistry.registerItem(RubyChest, RubyChest.getUnlocalizedName());
+		GameRegistry.registerItem(RubyLegs, RubyLegs.getUnlocalizedName());
+		GameRegistry.registerItem(RubyBoots, RubyBoots.getUnlocalizedName());
+
 	}
 
 	@EventHandler
@@ -640,8 +687,7 @@ public class ms {
 
 		GameRegistry.addRecipe(new ItemStack(RubyBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ruby });
 		GameRegistry.addShapelessRecipe(new ItemStack(Ruby, 9), new Object[] { RubyBlock });
-		
-		
+
 	}
 
 	public static void oreDictionary() {
