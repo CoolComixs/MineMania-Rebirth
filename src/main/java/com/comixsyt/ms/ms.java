@@ -208,10 +208,10 @@ public class ms {
 	public static final Item.ToolMaterial UltimatiumT = EnumHelper.addToolMaterial("UltimatiumT", 6, 4999, 14.0F, 5.5F,
 			18);
 
-	public static final Item.ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial", 2, 250, 6.0F, 2.0F,
-			14);
-	public static final ItemArmor.ArmorMaterial RubyA = EnumHelper.addArmorMaterial("RubyA", 15,
-			new int[] { 2, 6, 5, 2 }, 9);
+	public static final Item.ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial", 3, 1651, 9.0F, 3.0F,
+			10);
+	public static final ItemArmor.ArmorMaterial RubyA = EnumHelper.addArmorMaterial("RubyA", 33,
+			new int[]{3, 8, 6, 3}, 10);
 
 	@Mod.Instance
 	public static ms modInstance;
