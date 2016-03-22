@@ -97,11 +97,11 @@ item.Rubychest.name=Ruby Chestplate
 item.Rubylegs.name=Ruby Leggings
 item.Rubyboots.name=Ruby Boots
 
-item.Emeraldaxe.name=Emerald Axe
-item.Emeraldhoe.name=Emerald Hoe
-item.Emeraldpic.name=Emerald Pickaxe
-item.Emeraldshovel.name=Emerald Shovel
-item.Emeraldsword.name=Emerald Sword
+item.EmeraldAxe.name=Emerald Axe
+item.EmeraldHoe.name=Emerald Hoe
+item.EmeraldPicaxe.name=Emerald Pickaxe
+item.EmeraldShovel.name=Emerald Shovel
+item.EmeraldSword.name=Emerald Sword
 item.Emeraldhelm.name=Emerald Helmet
 item.Emeraldchest.name=Emerald Chestplate
 item.Emeraldlegs.name=Emerald Leggings
