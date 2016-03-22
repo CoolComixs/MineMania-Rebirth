@@ -38,6 +38,7 @@ import com.comixsyt.ms.item.Rubyshovel;
 import com.comixsyt.ms.item.Rubysword;
 import com.comixsyt.ms.item.Ultimatium;
 import com.comixsyt.ms.item.Ultimatiumarmor;
+import com.comixsyt.ms.item.beetrootitem;
 import com.comixsyt.ms.item.diamondiumarmor;
 import com.comixsyt.ms.item.glassAxe;
 import com.comixsyt.ms.item.glassHoe;
@@ -583,7 +584,7 @@ public class ms {
 		BeetCrop = new BeetCrop().setBlockName("BeetCrop").setBlockTextureName("ms:beet");
 		beetseed = new ItemSeeds(BeetCrop, Blocks.farmland).setCreativeTab(tabMSI).setUnlocalizedName("beetseed")
 				.setTextureName("ms:beetseed");
-		beetrootitem = new Item().setUnlocalizedName("beetrootitem").setTextureName("ms:beetroot").setCreativeTab(tabMSI);
+		beetrootitem = new beetrootitem(1, 1.2F, false).setUnlocalizedName("beetrootitem").setTextureName("ms:beetroot").setCreativeTab(tabMSI);
 
 		GameRegistry.registerItem(beetseed, beetseed.getUnlocalizedName());
 		GameRegistry.registerItem(beetrootitem, beetrootitem.getUnlocalizedName());
