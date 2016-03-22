@@ -744,6 +744,41 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(RubyBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ruby });
 		GameRegistry.addShapelessRecipe(new ItemStack(Ruby, 9), new Object[] { RubyBlock });
 
+		GameRegistry.addRecipe(new ItemStack(Rubypic),
+				new Object[] { "DDD", " S ", " S ", 'D', Ruby, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Rubysword),
+				new Object[] { " D ", " D ", " S ", 'D', Ruby, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Rubyshovel),
+				new Object[] { " D ", " S ", " S ", 'D', Ruby, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Rubyaxe),
+				new Object[] { "DD ", "DS ", " S ", 'D', Ruby, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Rubyhoe),
+				new Object[] { "DD ", " S ", " S ", 'D', Ruby, 'S', Items.stick });
+
+		GameRegistry.addRecipe(new ItemStack(RubyHelm), new Object[] { "PPP", "P P", 'P', Ruby });
+		GameRegistry.addRecipe(new ItemStack(RubyLegs), new Object[] { "PPP", "P P", "P P", 'P', Ruby });
+		GameRegistry.addRecipe(new ItemStack(RubyChest), new Object[] { "P P", "PPP", "PPP", 'P', Ruby });
+		GameRegistry.addRecipe(new ItemStack(RubyBoots), new Object[] { "P P", "P P", 'P', Ruby });
+
+		GameRegistry.addRecipe(new ItemStack(Emeraldpic),
+				new Object[] { "DDD", " S ", " S ", 'D', Items.emerald, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Emeraldsword),
+				new Object[] { " D ", " D ", " S ", 'D', Items.emerald, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Emeraldshovel),
+				new Object[] { " D ", " S ", " S ", 'D', Items.emerald, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Emeraldaxe),
+				new Object[] { "DD ", "DS ", " S ", 'D', Items.emerald, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Emeraldhoe),
+				new Object[] { "DD ", " S ", " S ", 'D', Items.emerald, 'S', Items.stick });
+		// No longer was lazy with the armor lol
+		GameRegistry.addRecipe(new ItemStack(EmeraldHelm), new Object[] { "PPP", "P P", 'P', Items.emerald });
+		GameRegistry.addRecipe(new ItemStack(EmeraldLegs), new Object[] { "PPP", "P P", "P P", 'P', Items.emerald });
+		GameRegistry.addRecipe(new ItemStack(EmeraldChest), new Object[] { "P P", "PPP", "PPP", 'P', Items.emerald });
+		GameRegistry.addRecipe(new ItemStack(EmeraldBoots), new Object[] { "P P", "P P", 'P', Items.emerald });
+
+		
+		
+		
 	}
 
 	public static void oreDictionary() {
