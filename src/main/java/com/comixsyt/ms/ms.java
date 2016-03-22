@@ -197,7 +197,7 @@ public class ms {
 	public static Item RubyChest;
 	public static Item RubyLegs;
 	public static Item RubyBoots;
-	
+
 	public static Item Emeraldpic;
 	public static Item Emeraldsword;
 	public static Item Emeraldhoe;
@@ -233,7 +233,7 @@ public class ms {
 	public static final Item.ToolMaterial RubyMaterial = EnumHelper.addToolMaterial("RubyMaterial", 3, 1651, 9.0F, 3.0F,
 			10);
 	public static final ItemArmor.ArmorMaterial RubyA = EnumHelper.addArmorMaterial("RubyA", 33,
-			new int[]{3, 8, 6, 3}, 10);
+			new int[] { 3, 8, 6, 3 }, 10);
 
 	@Mod.Instance
 	public static ms modInstance;
@@ -544,14 +544,13 @@ public class ms {
 		GameRegistry.registerItem(RubyChest, RubyChest.getUnlocalizedName());
 		GameRegistry.registerItem(RubyLegs, RubyLegs.getUnlocalizedName());
 		GameRegistry.registerItem(RubyBoots, RubyBoots.getUnlocalizedName());
-		
-		
+
 		Emeraldpic = new Emeraldpic(RubyMaterial).setUnlocalizedName("EmeraldPickaxe").setTextureName("ms:EmeraldPic")
 				.setCreativeTab(tabMST);
-		Emeraldsword = new Emeraldsword(RubyMaterial).setUnlocalizedName("EmeraldSword").setTextureName("ms:EmeraldSword")
-				.setCreativeTab(tabMST);
-		Emeraldshovel = new Emeraldshovel(RubyMaterial).setUnlocalizedName("EmeraldShovel").setTextureName("ms:EmeraldShovel")
-				.setCreativeTab(tabMST);
+		Emeraldsword = new Emeraldsword(RubyMaterial).setUnlocalizedName("EmeraldSword")
+				.setTextureName("ms:EmeraldSword").setCreativeTab(tabMST);
+		Emeraldshovel = new Emeraldshovel(RubyMaterial).setUnlocalizedName("EmeraldShovel")
+				.setTextureName("ms:EmeraldShovel").setCreativeTab(tabMST);
 		Emeraldhoe = new Emeraldhoe(RubyMaterial).setUnlocalizedName("EmeraldHoe").setTextureName("ms:EmeraldHoe")
 				.setCreativeTab(tabMST);
 		Emeraldaxe = new Emeraldaxe(RubyMaterial).setUnlocalizedName("EmeraldAxe").setTextureName("ms:EmeraldAxe")
@@ -565,19 +564,17 @@ public class ms {
 
 		EmeraldHelm = new Emeraldarmor(RubyA, 0, 0).setUnlocalizedName("Emeraldhelm").setTextureName("ms:EmeraldHelm")
 				.setCreativeTab(tabMSA);
-		EmeraldChest = new Emeraldarmor(RubyA, 0, 1).setUnlocalizedName("Emeraldchest").setTextureName("ms:EmeraldChest")
-				.setCreativeTab(tabMSA);
+		EmeraldChest = new Emeraldarmor(RubyA, 0, 1).setUnlocalizedName("Emeraldchest")
+				.setTextureName("ms:EmeraldChest").setCreativeTab(tabMSA);
 		EmeraldLegs = new Emeraldarmor(RubyA, 0, 2).setUnlocalizedName("Emeraldlegs").setTextureName("ms:EmeraldLegs")
 				.setCreativeTab(tabMSA);
-		EmeraldBoots = new Emeraldarmor(RubyA, 0, 3).setUnlocalizedName("Emeraldboots").setTextureName("ms:EmeraldBoots")
-				.setCreativeTab(tabMSA);
+		EmeraldBoots = new Emeraldarmor(RubyA, 0, 3).setUnlocalizedName("Emeraldboots")
+				.setTextureName("ms:EmeraldBoots").setCreativeTab(tabMSA);
 
 		GameRegistry.registerItem(EmeraldHelm, EmeraldHelm.getUnlocalizedName());
 		GameRegistry.registerItem(EmeraldChest, EmeraldChest.getUnlocalizedName());
 		GameRegistry.registerItem(EmeraldLegs, EmeraldLegs.getUnlocalizedName());
 		GameRegistry.registerItem(EmeraldBoots, EmeraldBoots.getUnlocalizedName());
-		
-		
 
 	}
 
@@ -776,9 +773,6 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(EmeraldChest), new Object[] { "P P", "PPP", "PPP", 'P', Items.emerald });
 		GameRegistry.addRecipe(new ItemStack(EmeraldBoots), new Object[] { "P P", "P P", 'P', Items.emerald });
 
-		
-		
-		
 	}
 
 	public static void oreDictionary() {
