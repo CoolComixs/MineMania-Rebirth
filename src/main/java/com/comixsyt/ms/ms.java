@@ -1,5 +1,6 @@
 package com.comixsyt.ms;
 
+import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Grinder;
 import com.comixsyt.ms.block.Liquefier;
@@ -18,6 +19,12 @@ import com.comixsyt.ms.item.DirtAxe;
 import com.comixsyt.ms.item.DirtHoe;
 import com.comixsyt.ms.item.DirtShovel;
 import com.comixsyt.ms.item.DirtSword;
+import com.comixsyt.ms.item.Emeraldarmor;
+import com.comixsyt.ms.item.Emeraldaxe;
+import com.comixsyt.ms.item.Emeraldhoe;
+import com.comixsyt.ms.item.Emeraldpic;
+import com.comixsyt.ms.item.Emeraldshovel;
+import com.comixsyt.ms.item.Emeraldsword;
 import com.comixsyt.ms.item.NRaxe;
 import com.comixsyt.ms.item.NRhoe;
 import com.comixsyt.ms.item.NRpic;
@@ -29,12 +36,6 @@ import com.comixsyt.ms.item.Rubyhoe;
 import com.comixsyt.ms.item.Rubypic;
 import com.comixsyt.ms.item.Rubyshovel;
 import com.comixsyt.ms.item.Rubysword;
-import com.comixsyt.ms.item.Emeraldarmor;
-import com.comixsyt.ms.item.Emeraldaxe;
-import com.comixsyt.ms.item.Emeraldhoe;
-import com.comixsyt.ms.item.Emeraldpic;
-import com.comixsyt.ms.item.Emeraldshovel;
-import com.comixsyt.ms.item.Emeraldsword;
 import com.comixsyt.ms.item.Ultimatium;
 import com.comixsyt.ms.item.Ultimatiumarmor;
 import com.comixsyt.ms.item.diamondiumarmor;
@@ -72,6 +73,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
@@ -134,11 +136,9 @@ public class ms {
 	public static Item UltimatiumChest;
 	public static Item UltimatiumLegs;
 	public static Item UltimatiumBoots;
-	// Ore & Blocks
-	// Ore
+
 	public static Block UltimatiumOre;
 
-	// Blocks
 	public static Block DiamondiumBlock;
 	public static Block UltimatiumBlock;
 
@@ -208,6 +208,10 @@ public class ms {
 	public static Item EmeraldChest;
 	public static Item EmeraldLegs;
 	public static Item EmeraldBoots;
+
+	public static Block BeetCrop;
+	public static Item beetrootitem;
+	public static Item beetseed;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -576,6 +580,17 @@ public class ms {
 		GameRegistry.registerItem(EmeraldLegs, EmeraldLegs.getUnlocalizedName());
 		GameRegistry.registerItem(EmeraldBoots, EmeraldBoots.getUnlocalizedName());
 
+		BeetCrop = new BeetCrop().setBlockName("BeetCrop").setBlockTextureName("ms:beet");
+		beetseed = new ItemSeeds(BeetCrop, Blocks.farmland).setCreativeTab(tabMSI).setUnlocalizedName("beetseed")
+				.setTextureName("ms:beetseed");
+		beetrootitem = new Item().setUnlocalizedName("beetrootitem").setTextureName("ms:beetroot").setCreativeTab(tabMSI);
+
+		GameRegistry.registerItem(beetseed, beetseed.getUnlocalizedName());
+		GameRegistry.registerItem(beetrootitem, beetrootitem.getUnlocalizedName());
+		GameRegistry.registerBlock(BeetCrop, BeetCrop.getUnlocalizedName());
+
+		
+		
 	}
 
 	@EventHandler

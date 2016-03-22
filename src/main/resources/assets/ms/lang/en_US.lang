@@ -87,11 +87,11 @@ item.Ruby.name=Ruby
 tile.RubyOre.name=Ruby Ore
 tile.RubyBlock.name=Block of Ruby
 
-item.Rubyaxe.name=Ruby Axe
-item.Rubyhoe.name=Ruby Hoe
-item.Rubypic.name=Ruby Pickaxe
-item.Rubyshovel.name=Ruby Shovel
-item.Rubysword.name=Ruby Sword
+item.RubyAxe.name=Ruby Axe
+item.RubyHoe.name=Ruby Hoe
+item.RubyPickaxe.name=Ruby Pickaxe
+item.RubyShovel.name=Ruby Shovel
+item.RubySword.name=Ruby Sword
 item.Rubyhelm.name=Ruby Helmet
 item.Rubychest.name=Ruby Chestplate
 item.Rubylegs.name=Ruby Leggings
@@ -107,6 +107,9 @@ item.Emeraldchest.name=Emerald Chestplate
 item.Emeraldlegs.name=Emerald Leggings
 item.Emeraldboots.name=Emerald Boots
 
+item.beetseed.name=Beetroot Seeds
+item.beetrootitem.name=Beetroot
+tile.BeetCrop.name=Beetroot Crop
 
 itemGroup.tabMST=MineMania Tools
 itemGroup.tabMSA=MineMania Armor
