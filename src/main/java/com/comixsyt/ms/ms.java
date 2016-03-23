@@ -253,6 +253,7 @@ public class ms {
 		// Item & block Initialization and registering
 		// Config handling if I want it latter on, most likely will no be added
 
+		
 		proxy.registerTileEntities();
 		proxy.registerRenderThings();
 
@@ -596,13 +597,13 @@ public class ms {
 
 		
 		
+		
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		// proxy, Entities, GUIs, packets
 
-		// NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new GuiHandler());
 
 		proxy.registerNetworkStuff();
@@ -794,8 +795,13 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(EmeraldChest), new Object[] { "P P", "PPP", "PPP", 'P', Items.emerald });
 		GameRegistry.addRecipe(new ItemStack(EmeraldBoots), new Object[] { "P P", "P P", 'P', Items.emerald });
 
+        ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),10,2,6));
+
+		
 	}
 
+	
+	
 	public static void oreDictionary() {
 		OreDictionary.registerOre("gemDiamondium", new ItemStack(Diamondium));
 		OreDictionary.registerOre("ingotDiamondium", new ItemStack(Diamondium));
