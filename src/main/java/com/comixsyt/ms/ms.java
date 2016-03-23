@@ -76,6 +76,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
+import net.minecraftforge.common.DungeonHooks;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -602,7 +606,8 @@ public class ms {
 		NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new GuiHandler());
 
 		proxy.registerNetworkStuff();
-
+	
+		
 		GameRegistry.addRecipe(new ItemStack(Liquefier),
 				new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Items.bucket });
 
