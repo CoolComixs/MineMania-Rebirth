@@ -1,5 +1,7 @@
 package com.comixsyt.ms;
 
+import java.util.Random;
+
 import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Grinder;
@@ -797,8 +799,9 @@ public class ms {
 
 		GameRegistry.addShapelessRecipe(new ItemStack(beetseed), new Object[] { Items.wheat_seeds, new ItemStack(Blocks.red_flower) });
 		
-        //ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),10,2,6));
-
+		
+	
+		
 		
 	}
 
