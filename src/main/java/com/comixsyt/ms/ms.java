@@ -599,11 +599,7 @@ public class ms {
 	}
 
 	
-	@EventHandler
-	  public void serverLoad(FMLServerStartingEvent event)
-	  {
-	    event.registerServerCommand(new bugcommand());
-	  }
+	
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
