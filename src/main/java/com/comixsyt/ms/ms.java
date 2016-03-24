@@ -1,5 +1,7 @@
 package com.comixsyt.ms;
 
+import java.util.Random;
+
 import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Grinder;
@@ -65,7 +67,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -77,6 +78,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
+import net.minecraftforge.common.DungeonHooks;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -85,6 +90,8 @@ public class ms {
 
 	@SidedProxy(clientSide = "com.comixsyt.ms.ClientProxy", serverSide = "com.comixsyt.ms.ServerProxy")
 	public static ServerProxy proxy;
+	
+	
 
 	// dirt
 	public static Item itemDirtPic; // always a habit for the first to have item
@@ -249,7 +256,6 @@ public class ms {
 		// Who the fuck thought FMLPreInitializationEvent should be one word?
 		// Item & block Initialization and registering
 		// Config handling if I want it latter on, most likely will no be added
-
 
 		
 		proxy.registerTileEntities();
@@ -598,9 +604,6 @@ public class ms {
 		
 	}
 
-	
-	
-	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		// proxy, Entities, GUIs, packets
@@ -798,9 +801,12 @@ public class ms {
 
 		GameRegistry.addShapelessRecipe(new ItemStack(beetseed), new Object[] { Items.wheat_seeds, new ItemStack(Blocks.red_flower) });
 		
-		
-	
-		
+		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,6,20));
+		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,10,50));
+		ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,10,6));
+		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,5,8));
+		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),4,19,6));
 		
 	}
 
