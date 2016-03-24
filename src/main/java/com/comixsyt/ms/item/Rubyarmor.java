@@ -17,10 +17,10 @@ public class Rubyarmor extends ItemArmor {
 		if (this.armorType == 2)
 		{
 			
-			return "ms:textures/models/armor/ruby_layer_2.png";
+			return "ms:textures/models/armor/Ruby_layer_2.png";
 			
 		}
-		return "ms:textures/models/armor/ruby_layer_1.png";
+		return "ms:textures/models/armor/Ruby_layer_1.png";
 		
 	}
 	
