@@ -86,7 +86,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
-@Mod(modid = "ms", name = "MineMania: Rebirth", version = "1.1")
+@Mod(modid = "ms", name = "MineMania", version = "1.1")
 public class ms {
 
 	@SidedProxy(clientSide = "com.comixsyt.ms.ClientProxy", serverSide = "com.comixsyt.ms.ServerProxy")
@@ -222,6 +222,8 @@ public class ms {
 	public static Block BeetCrop;
 	public static Item beetrootitem;
 	public static Item beetseed;
+	
+	public static Item Legoguy110_Dev_Egg;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -599,7 +601,8 @@ public class ms {
 		GameRegistry.registerItem(beetseed, beetseed.getUnlocalizedName());
 		GameRegistry.registerItem(beetrootitem, beetrootitem.getUnlocalizedName());
 		GameRegistry.registerBlock(BeetCrop, BeetCrop.getUnlocalizedName());
-
+		
+		
 		
 		
 		
