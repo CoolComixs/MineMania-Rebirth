@@ -10,6 +10,7 @@ import com.comixsyt.ms.block.RubyBlock;
 import com.comixsyt.ms.block.RubyOre;
 import com.comixsyt.ms.block.UltimatiumBlock;
 import com.comixsyt.ms.block.UltimatiumOre;
+import com.comixsyt.ms.entity.EntityLG;
 import com.comixsyt.ms.handler.GuiHandler;
 import com.comixsyt.ms.item.CHarmor;
 import com.comixsyt.ms.item.Diamondiumaxe;
@@ -60,9 +61,9 @@ import com.comixsyt.ms.item.rsHoe;
 import com.comixsyt.ms.item.rsPic;
 import com.comixsyt.ms.item.rsShovel;
 import com.comixsyt.ms.item.rsSword;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -830,8 +831,14 @@ public class ms {
 		OreDictionary.registerOre("gemRuby", new ItemStack(Ruby));
 		OreDictionary.registerOre("oreRuby", new ItemStack(RubyOre));
 
-	}
+	} 
 
+	@EventHandler
+	public void PreLoad(FMLPreInitializationEvent PreEvent){
+		EntityLG.mainRegisrty();
+		
+	}
+	
 	@EventHandler
 	public void init(FMLPostInitializationEvent event) {
 
