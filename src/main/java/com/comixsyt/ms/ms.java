@@ -838,6 +838,7 @@ public class ms {
 	@EventHandler
 	public void PreLoad(FMLPreInitializationEvent PreEvent){
 		EntityLG.mainRegisrty();
+		EntityCC.mainRegisrty();
 		
 	}
 	
