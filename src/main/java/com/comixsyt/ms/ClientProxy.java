@@ -16,6 +16,7 @@ public class ClientProxy extends ServerProxy{
 	public void registerRenderThings(){
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityLegoguy110Mob.class, new RenderLegoguy110Mob(new Legoguy110_Dev(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityComixsMob.class, new RenderComixsMob(new ComixsYT_Dev), 0);
 	}
 	
 	public int addArmor(String armor){
