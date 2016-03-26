@@ -95,8 +95,7 @@ public class ms {
 	
 
 	// dirt
-	public static Item itemDirtPic; // always a habit for the first to have item
-									// in the name, don't know why lol.
+	public static Item itemDirtPic; 
 	public static Item DirtSword;
 	public static Item DirtShovel;
 	public static Item DirtHoe;
