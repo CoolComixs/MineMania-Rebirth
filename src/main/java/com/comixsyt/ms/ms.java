@@ -437,12 +437,12 @@ public class ms {
 		GameRegistry.registerItem(CHBoots, CHBoots.getUnlocalizedName());
 
 		// NeatherRack
-		NRpic = new NRpic(NRT).setUnlocalizedName("NRpic").setTextureName("ms:NR_pic").setCreativeTab(tabMST);
-		NRsword = new NRsword(NRT).setUnlocalizedName("NRsword").setTextureName("ms:NR_sword").setCreativeTab(tabMST);
-		NRshovel = new NRshovel(NRT).setUnlocalizedName("NRshovel").setTextureName("ms:NR_shovel")
+		NRpic = new NRpic(NRT).setUnlocalizedName("NRpic").setTextureName("ms:NRpic").setCreativeTab(tabMST);
+		NRsword = new NRsword(NRT).setUnlocalizedName("NRsword").setTextureName("ms:NRsword").setCreativeTab(tabMST);
+		NRshovel = new NRshovel(NRT).setUnlocalizedName("NRshovel").setTextureName("ms:NRshovel")
 				.setCreativeTab(tabMST);
-		NRhoe = new NRhoe(NRT).setUnlocalizedName("NRhoe").setTextureName("ms:NR_hoe").setCreativeTab(tabMST);
-		NRaxe = new NRaxe(NRT).setUnlocalizedName("NRaxe").setTextureName("ms:NR_axe").setCreativeTab(tabMST);
+		NRhoe = new NRhoe(NRT).setUnlocalizedName("NRhoe").setTextureName("ms:NRhoe").setCreativeTab(tabMST);
+		NRaxe = new NRaxe(NRT).setUnlocalizedName("NRaxe").setTextureName("ms:NRaxe").setCreativeTab(tabMST);
 
 		GameRegistry.registerItem(NRpic, NRpic.getUnlocalizedName());
 		GameRegistry.registerItem(NRsword, NRsword.getUnlocalizedName());
