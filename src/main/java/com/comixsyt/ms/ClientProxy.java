@@ -1,5 +1,11 @@
 package com.comixsyt.ms;
 
+import com.comixsyt.ms.entity.EntityComixsMob;
+import com.comixsyt.ms.entity.EntityLegoguy110Mob;
+import com.comixsyt.ms.entityrenderer.ComixsYT_Dev;
+import com.comixsyt.ms.entityrenderer.Legoguy110_Dev;
+import com.comixsyt.ms.entityrenderer.RenderComixsMob;
+import com.comixsyt.ms.entityrenderer.RenderLegoguy110Mob;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -8,7 +14,6 @@ import com.comixsyt.ms.entity.*;
 import com.comixsyt.ms.entityrenderer.*;
 
 
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends ServerProxy{
