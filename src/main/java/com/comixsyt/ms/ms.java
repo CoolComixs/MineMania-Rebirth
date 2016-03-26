@@ -264,7 +264,7 @@ public class ms {
 		proxy.registerTileEntities();
 		proxy.registerRenderThings();
 
-		oreDictionary();
+		//oreDictionary();
 
 		// Tools & Armor
 		// dirt tools
@@ -816,7 +816,7 @@ public class ms {
 
 	
 	
-	public static void oreDictionary() {
+	/*public static void oreDictionary() {
 		OreDictionary.registerOre("gemDiamondium", new ItemStack(Diamondium));
 		OreDictionary.registerOre("ingotDiamondium", new ItemStack(Diamondium));
 		OreDictionary.registerOre("nuggetDiamond", new ItemStack(DiamondiumN));
@@ -834,7 +834,7 @@ public class ms {
 		OreDictionary.registerOre("gemRuby", new ItemStack(Ruby));
 		OreDictionary.registerOre("oreRuby", new ItemStack(RubyOre));
 
-	} 
+	} */
 
 	@EventHandler
 	public void PreLoad(FMLPreInitializationEvent PreEvent){
