@@ -111,6 +111,10 @@ item.beetseed.name=Beetroot Seeds
 item.beetrootitem.name=Beetroot
 tile.BeetCrop.name=Beetroot Crop
 
+entity.Legoguy110 Dev.name=Legoguy110 Dev
+entity.Comixs_Dev.name=ComixsYT Dev
+
+
 itemGroup.tabMST=MineMania Tools
 itemGroup.tabMSA=MineMania Armor
 itemGroup.tabMSI=MineMania Items
