@@ -1,5 +1,6 @@
 package com.comixsyt.ms;
 
+import net.minecraft.client.model.ModelCow;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -16,6 +17,7 @@ public class ClientProxy extends ServerProxy{
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityLegoguy110Mob.class, new RenderLegoguy110Mob(new Legoguy110_Dev(), 0));
 		RenderingRegistry.registerEntityRenderingHandler(EntityComixsMob.class, new RenderComixsMob(new ComixsYT_Dev(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(KillerMoo.class, new RenderKillerCow(new ModelCow(), 0));
 	}
 	
 	public int addArmor(String armor){

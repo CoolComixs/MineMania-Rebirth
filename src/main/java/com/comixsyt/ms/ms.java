@@ -11,6 +11,7 @@ import com.comixsyt.ms.block.RubyOre;
 import com.comixsyt.ms.block.UltimatiumBlock;
 import com.comixsyt.ms.block.UltimatiumOre;
 import com.comixsyt.ms.entity.EntityCC;
+import com.comixsyt.ms.entity.EntityKillerCow;
 import com.comixsyt.ms.entity.EntityLG;
 import com.comixsyt.ms.handler.GuiHandler;
 import com.comixsyt.ms.item.CHarmor;
@@ -840,6 +841,7 @@ public class ms {
 	public void PreLoad(FMLPreInitializationEvent PreEvent){
 		EntityLG.mainRegisrty();
 		EntityCC.mainRegisrty();
+		EntityKillerCow.mainRegistry();
 		
 	}
 	

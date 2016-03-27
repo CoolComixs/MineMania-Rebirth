@@ -16,7 +16,7 @@ public class EntityLG {
 	
 	public static void registerEntity(){
 		
-		createEntity(EntityLegoguy110Mob.class, "Legoguy110 Dev", 0x2E2E2E, 0x960000);
+		createEntity(EntityLegoguy110Mob.class, "Legoguy110_Dev", 0x2E2E2E, 0x960000);
 		
 	}
 	
