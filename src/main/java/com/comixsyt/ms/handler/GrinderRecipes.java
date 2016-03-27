@@ -23,7 +23,7 @@ public class GrinderRecipes {
 		return SMELTING_BASE;
 	}
 	
-	private GrinderRecipes(){
+	public GrinderRecipes(){
         //this.addRecipie(INPUT, new ItemStack(OUTPUT), XPFLOAT);
 		//this.addRecipie(Item.getItemFromBlock(INPUT), new ItemStack(OUTPUT),XPFLOAT);
 		//Bellow was a test, disregard it.
@@ -35,15 +35,15 @@ public class GrinderRecipes {
 		this.addRecipie(Items.emerald, new ItemStack(ms.emeraldDust), 0.8F);
 		this.addRecipie(ms.Diamondium, new ItemStack(ms.diamondiumDust), 0.8F);
 		this.addRecipie(ms.Ultimatium, new ItemStack(ms.ultimatiumDust), 0.8F);
-		this.addRecipie(ms.Ultimatium, new ItemStack(ms.rubyDust), 0.8F);
+		this.addRecipie(ms.Ruby, new ItemStack(ms.rubyDust), 0.8F);
 
 		
 		this.addRecipie(Item.getItemFromBlock(Blocks.coal_ore), new ItemStack(ms.coalDust, 2), 0.8F);
 		this.addRecipie(Item.getItemFromBlock(Blocks.iron_ore), new ItemStack(ms.ironDust, 2), 0.8F);
-		this.addRecipie(Item.getItemFromBlock(Blocks.gold_ore), new ItemStack(ms.ironDust, 2), 0.8F);
-		this.addRecipie(Item.getItemFromBlock(Blocks.diamond_ore), new ItemStack(ms.ironDust, 2), 0.8F);
-		this.addRecipie(Item.getItemFromBlock(Blocks.emerald_ore), new ItemStack(ms.ironDust, 2), 0.8F);
-		this.addRecipie(Item.getItemFromBlock(ms.UltimatiumOre), new ItemStack(ms.ironDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(Blocks.gold_ore), new ItemStack(ms.goldDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(Blocks.diamond_ore), new ItemStack(ms.diamondDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(Blocks.emerald_ore), new ItemStack(ms.emeraldDust, 2), 0.8F);
+		this.addRecipie(Item.getItemFromBlock(ms.UltimatiumOre), new ItemStack(ms.ultimatiumDust, 2), 0.8F);
 		this.addRecipie(Item.getItemFromBlock(ms.RubyOre), new ItemStack(ms.rubyDust, 2), 0.8F);
 
 
@@ -80,6 +80,7 @@ public class GrinderRecipes {
 		return itemstack2.getItem() == itemstack.getItem() && (itemstack2.getItemDamage() == 32767 || itemstack2.getItemDamage() == itemstack.getItemDamage());
 	}
 	
+	
 	public float giveExperience(ItemStack itemstack){
 		Iterator iterator = this.experienceList.entrySet().iterator();
 		Entry entry;
@@ -99,5 +100,10 @@ public class GrinderRecipes {
 		
 		return ((Float) entry.getValue()).floatValue();
 	}
+	
+	  public Map getSmeltingList()
+	    {
+	        return this.smeltingList;
+	    }
 }
 	
