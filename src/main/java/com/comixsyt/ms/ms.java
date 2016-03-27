@@ -2,6 +2,7 @@ package com.comixsyt.ms;
 
 import java.util.Random;
 
+import com.comixsyt.ms.entity.EntityKillerCow;
 import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Grinder;
@@ -85,6 +86,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.DungeonHooks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.DungeonHooks.DungeonMob;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -807,11 +809,21 @@ public class ms {
 		GameRegistry.addShapelessRecipe(new ItemStack(beetseed), new Object[] { Items.wheat_seeds, new ItemStack(Blocks.red_flower) });
 		
 		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
+		//ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new WeightedRandomChestContent(new ItemStack(ITEM),MIN,MAX,RARITY));
+
 		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,6,20));
 		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,10,50));
 		ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,10,6));
 		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,5,8));
 		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),4,19,6));
+		
+		
+		//Add new dungeon mobs
+		//DungeonHooks.addDungeonMob("NAME", Chance);
+		DungeonHooks.addDungeonMob("Killer_Cow", 20);
+		DungeonHooks.addDungeonMob("creeper", 20);
+
+
 		
 	}
 
