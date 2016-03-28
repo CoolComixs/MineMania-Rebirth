@@ -4,6 +4,11 @@ MineMania was a Minecraft mod for 1.7.10 made using Minecraft Forge and Eclipse.
 #The Mission
 About two weeks ago was the first time I was contacted about the mod by a person with the skype name of thevideogamekidtyler. Since then, the two of us have been collaborating with ideas and textures for the remake of the mod. With my Java knowledge and a combination of our texturing skills, has created the reincarnation of MineMania.
 
+#Team
+Current Team consists of:
+ComixsYT - Dev
+Legoguy/Mr. Seep - Dev and textures
+
 #Status/Info
 At the moment, the mod is in slow but steady development! I am looking for contributors
 If you have any interest in joining the project, add me on skype (cool.comixs) or email me (minemania@comixsyt.net)!
