@@ -95,11 +95,9 @@ public class ms {
 
 	@SidedProxy(clientSide = "com.comixsyt.ms.ClientProxy", serverSide = "com.comixsyt.ms.ServerProxy")
 	public static ServerProxy proxy;
-	
-	
 
 	// dirt
-	public static Item itemDirtPic; 
+	public static Item itemDirtPic;
 	public static Item DirtSword;
 	public static Item DirtShovel;
 	public static Item DirtHoe;
@@ -225,8 +223,7 @@ public class ms {
 	public static Block BeetCrop;
 	public static Item beetrootitem;
 	public static Item beetseed;
-	
-	
+
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
 	public static final Item.ToolMaterial glassMaterial = EnumHelper.addToolMaterial("dirtMaterial", 3, 1, 5.0F, 2.5F,
@@ -262,7 +259,6 @@ public class ms {
 		// Item & block Initialization and registering
 		// Config handling if I want it latter on, most likely will no be added
 
-		
 		proxy.registerTileEntities();
 		proxy.registerRenderThings();
 
@@ -598,16 +594,13 @@ public class ms {
 		BeetCrop = new BeetCrop().setBlockName("BeetCrop").setBlockTextureName("ms:beet");
 		beetseed = new ItemSeeds(BeetCrop, Blocks.farmland).setCreativeTab(tabMSI).setUnlocalizedName("beetseed")
 				.setTextureName("ms:beetseed");
-		beetrootitem = new beetrootitem(1, 1.2F, false).setUnlocalizedName("beetrootitem").setTextureName("ms:beetroot").setCreativeTab(tabMSI);
+		beetrootitem = new beetrootitem(1, 1.2F, false).setUnlocalizedName("beetrootitem").setTextureName("ms:beetroot")
+				.setCreativeTab(tabMSI);
 
 		GameRegistry.registerItem(beetseed, beetseed.getUnlocalizedName());
 		GameRegistry.registerItem(beetrootitem, beetrootitem.getUnlocalizedName());
 		GameRegistry.registerBlock(BeetCrop, BeetCrop.getUnlocalizedName());
-		
-		
-		
-		
-		
+
 	}
 
 	@EventHandler
@@ -617,8 +610,7 @@ public class ms {
 		NetworkRegistry.INSTANCE.registerGuiHandler(ms.modInstance, new GuiHandler());
 
 		proxy.registerNetworkStuff();
-	
-		
+
 		GameRegistry.addRecipe(new ItemStack(Liquefier),
 				new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Items.bucket });
 
@@ -805,29 +797,31 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(EmeraldChest), new Object[] { "P P", "PPP", "PPP", 'P', Items.emerald });
 		GameRegistry.addRecipe(new ItemStack(EmeraldBoots), new Object[] { "P P", "P P", 'P', Items.emerald });
 
-		GameRegistry.addShapelessRecipe(new ItemStack(beetseed), new Object[] { Items.wheat_seeds, new ItemStack(Blocks.red_flower) });
-		
-		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
-		//ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new WeightedRandomChestContent(new ItemStack(ITEM),MIN,MAX,RARITY));
+		GameRegistry.addShapelessRecipe(new ItemStack(beetseed),
+				new Object[] { Items.wheat_seeds, new ItemStack(Blocks.red_flower) });
 
-		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,6,20));
-		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,10,50));
-		ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,10,6));
-		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),2,5,8));
-		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY).addItem(new WeightedRandomChestContent(new ItemStack(beetseed),4,19,6));
-		
-		
-		//Add new dungeon mobs
-		//DungeonHooks.addDungeonMob("NAME", Chance);
+		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
+		// ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new
+		// WeightedRandomChestContent(new ItemStack(ITEM),MIN,MAX,RARITY));
+
+		ChestGenHooks.getInfo(ChestGenHooks.VILLAGE_BLACKSMITH)
+				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 2, 6, 20));
+		ChestGenHooks.getInfo(ChestGenHooks.PYRAMID_DESERT_CHEST)
+				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 2, 10, 50));
+		ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST)
+				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 2, 10, 6));
+		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_CORRIDOR)
+				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 2, 5, 8));
+		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY)
+				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 4, 19, 6));
+
+		// Add new dungeon mobs
+		// DungeonHooks.addDungeonMob("NAME", Chance);
 		DungeonHooks.addDungeonMob("Killer_Cow", 20);
 		DungeonHooks.addDungeonMob("creeper", 20);
 
-
-		
 	}
 
-	
-	
 	public static void oreDictionary() {
 		OreDictionary.registerOre("gemDiamondium", new ItemStack(Diamondium));
 		OreDictionary.registerOre("ingotDiamondium", new ItemStack(Diamondium));
@@ -849,13 +843,13 @@ public class ms {
 	}
 
 	@EventHandler
-	public void PreLoad(FMLPreInitializationEvent PreEvent){
+	public void PreLoad(FMLPreInitializationEvent PreEvent) {
 		EntityLG.mainRegisrty();
 		EntityCC.mainRegisrty();
 		EntityKillerCow.mainRegistry();
-		
+
 	}
-	
+
 	@EventHandler
 	public void init(FMLPostInitializationEvent event) {
 
@@ -880,8 +874,10 @@ public class ms {
 	};
 
 	public static CreativeTabs tabMSI = new CreativeTabs("tabMSI") {
-		/* despite being MSI, I have no connection to them at all, I prefer EVGA
-		 and ASUS, lol */
+		/*
+		 * despite being MSI, I have no connection to them at all, I prefer EVGA
+		 * and ASUS, lol
+		 */
 		@Override
 		public Item getTabIconItem() {
 			return new ItemStack(hRoot).getItem();
