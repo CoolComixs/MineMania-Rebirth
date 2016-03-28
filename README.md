@@ -6,8 +6,7 @@ About two weeks ago was the first time I was contacted about the mod by a person
 
 #Team
 Current Team consists of:
-ComixsYT - Dev
-Legoguy/Mr. Seep - Dev and textures
+ComixsYT (Dev) and Legoguy/Mr. Seep (Dev and Textures).
 
 #Status/Info
 At the moment, the mod is in slow but steady development! I am looking for contributors
