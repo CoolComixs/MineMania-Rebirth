@@ -6,7 +6,7 @@ import com.comixsyt.ms.entity.EntityKillerCow;
 import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Grinder;
-import com.comixsyt.ms.block.Liquefier;
+//import com.comixsyt.ms.block.Liquefier;
 import com.comixsyt.ms.block.RubyBlock;
 import com.comixsyt.ms.block.RubyOre;
 import com.comixsyt.ms.block.UltimatiumBlock;
@@ -176,8 +176,8 @@ public class ms {
 	public static Item NRshovel;
 	public static Item NRaxe;
 
-	public static Block Liquefier;
-	public static Block LiquefierActive;
+	//public static Block Liquefier;
+	//public static Block LiquefierActive;
 
 	public static Block Grinder;
 	public static Block GrinderActive;
@@ -355,11 +355,11 @@ public class ms {
 		mIron = new Item().setUnlocalizedName("mIron").setTextureName("ms:mIron").setCreativeTab(tabMSI);
 		GameRegistry.registerItem(mIron, mIron.getUnlocalizedName());
 
-		Liquefier = new Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
-		LiquefierActive = new Liquefier(true).setBlockName("LiquefierActive");
+		//Liquefier = new Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
+		//LiquefierActive = new Liquefier(true).setBlockName("LiquefierActive");
 
-		GameRegistry.registerBlock(Liquefier, Liquefier.getUnlocalizedName());
-		GameRegistry.registerBlock(LiquefierActive, LiquefierActive.getUnlocalizedName());
+		//GameRegistry.registerBlock(Liquefier, Liquefier.getUnlocalizedName());
+		//GameRegistry.registerBlock(LiquefierActive, LiquefierActive.getUnlocalizedName());
 
 		Grinder = new Grinder(false).setBlockName("Grinder").setCreativeTab(tabMSB);
 		GrinderActive = new Grinder(true).setBlockName("GrinderActive");
@@ -611,8 +611,8 @@ public class ms {
 
 		proxy.registerNetworkStuff();
 
-		GameRegistry.addRecipe(new ItemStack(Liquefier),
-				new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Items.bucket });
+		//GameRegistry.addRecipe(new ItemStack(Liquefier),
+			//	new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Items.bucket });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(iRod), new Object[] { mIron, new ItemStack(Items.stick) });
 		GameRegistry.addRecipe(new ItemStack(cBlade), new Object[] { " I ", "I I", " I ", 'I', Items.iron_ingot });
@@ -797,9 +797,10 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(EmeraldChest), new Object[] { "P P", "PPP", "PPP", 'P', Items.emerald });
 		GameRegistry.addRecipe(new ItemStack(EmeraldBoots), new Object[] { "P P", "P P", 'P', Items.emerald });
 
-		GameRegistry.addShapelessRecipe(new ItemStack(beetseed),
-				new Object[] { Items.wheat_seeds, new ItemStack(Blocks.red_flower) });
 
+		GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(mIron), 5.0F);
+
+		
 		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
 		// ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new
 		// WeightedRandomChestContent(new ItemStack(ITEM),MIN,MAX,RARITY));
