@@ -1,12 +1,9 @@
 package com.comixsyt.ms;
 
-import java.util.Random;
-
-import com.comixsyt.ms.entity.EntityKillerCow;
 import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Grinder;
-//import com.comixsyt.ms.block.Liquefier;
+import com.comixsyt.ms.block.Liquefier;
 import com.comixsyt.ms.block.RubyBlock;
 import com.comixsyt.ms.block.RubyOre;
 import com.comixsyt.ms.block.UltimatiumBlock;
@@ -223,6 +220,7 @@ public class ms {
 	public static Block BeetCrop;
 	public static Item beetrootitem;
 	public static Item beetseed;
+	
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -355,8 +353,8 @@ public class ms {
 		mIron = new Item().setUnlocalizedName("mIron").setTextureName("ms:mIron").setCreativeTab(tabMSI);
 		GameRegistry.registerItem(mIron, mIron.getUnlocalizedName());
 
-		//Liquefier = new Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
-		//LiquefierActive = new Liquefier(true).setBlockName("LiquefierActive");
+		Liquefier = new Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
+		LiquefierActive = new Liquefier(true).setBlockName("LiquefierActive");
 
 		//GameRegistry.registerBlock(Liquefier, Liquefier.getUnlocalizedName());
 		//GameRegistry.registerBlock(LiquefierActive, LiquefierActive.getUnlocalizedName());
