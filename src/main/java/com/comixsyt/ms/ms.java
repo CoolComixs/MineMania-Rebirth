@@ -226,8 +226,7 @@ public class ms {
 	public static Item beetrootitem;
 	public static Item beetseed;
 	
-	public static Item Legoguy110_Dev_Egg;
-
+	
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
 	public static final Item.ToolMaterial glassMaterial = EnumHelper.addToolMaterial("dirtMaterial", 3, 1, 5.0F, 2.5F,
@@ -881,8 +880,8 @@ public class ms {
 	};
 
 	public static CreativeTabs tabMSI = new CreativeTabs("tabMSI") {
-		// despite being MSI, I have no connection to them at all, I prefer EVGA
-		// and ASUS, lol
+		/* despite being MSI, I have no connection to them at all, I prefer EVGA
+		 and ASUS, lol */
 		@Override
 		public Item getTabIconItem() {
 			return new ItemStack(hRoot).getItem();
