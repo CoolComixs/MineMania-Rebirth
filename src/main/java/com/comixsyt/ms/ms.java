@@ -816,7 +816,8 @@ public class ms {
 				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 4, 19, 6));
 
 		// Add new dungeon mobs
-		// DungeonHooks.addDungeonMob("NAME", Chance);
+		// DungeonHooks.addDungeonMob("NAME", Chance); Chances - Zombie 200,
+		// Spider/Skeleton 100
 		DungeonHooks.addDungeonMob("Killer_Cow", 20);
 		DungeonHooks.addDungeonMob("creeper", 20);
 
