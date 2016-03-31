@@ -1,12 +1,11 @@
 package com.comixsyt.ms.entity;
 
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.BiomeGenBase;
-
 import com.comixsyt.ms.entityrenderer.KillerMoo;
 
 import cpw.mods.fml.common.registry.EntityRegistry;
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.BiomeGenBase;
 
 public class EntityKillerCow {
  

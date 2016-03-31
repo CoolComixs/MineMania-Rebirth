@@ -1,6 +1,7 @@
 package com.comixsyt.ms.entityrenderer;
 
 import com.comixsyt.ms.entity.EntityComixsMob;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;

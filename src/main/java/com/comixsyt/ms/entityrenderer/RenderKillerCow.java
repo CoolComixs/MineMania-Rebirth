@@ -1,6 +1,5 @@
 package com.comixsyt.ms.entityrenderer;
 
-import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelCow;
 import net.minecraft.client.renderer.entity.RenderCow;
 import net.minecraft.entity.Entity;
