@@ -691,7 +691,17 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(DiamondiumBoots), new Object[] { "P P", "P P", 'P', Diamondium });
 		GameRegistry.addRecipe(new ItemStack(DiamondiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Diamondium });
 		GameRegistry.addShapelessRecipe(new ItemStack(Diamondium, 9), new Object[] { DiamondiumBlock });
-
+		GameRegistry.addRecipe(new ItemStack(Diamondiumpic),
+				new Object[] { "DDD", " S ", " S ", 'D', Diamondium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Diamondiumsword),
+				new Object[] { " D ", " D ", " S ", 'D', Diamondium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Diamondiumshovel),
+				new Object[] { " D ", " S ", " S ", 'D', Diamondium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Diamondiumaxe),
+				new Object[] { "DD ", "DS ", " S ", 'D', Diamondium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Diamondiumhoe),
+				new Object[] { "DD ", " S ", " S ", 'D', Diamondium, 'S', Items.stick });
+		
 		// NetherRack
 		GameRegistry.addRecipe(new ItemStack(NRpic),
 				new Object[] { "DDD", " S ", " S ", 'D', Blocks.netherrack, 'S', Items.blaze_rod });
@@ -717,8 +727,25 @@ public class ms {
 		// Ultimatium
 		GameRegistry.addRecipe(new ItemStack(UltimatiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ultimatium });
 		GameRegistry.addShapelessRecipe(new ItemStack(Ultimatium, 9), new Object[] { UltimatiumBlock });
-		GameRegistry.addRecipe(new ItemStack(Ultimatium), new Object[] { "PPP", "PPP", "PPP", 'P', Diamondium });
+		GameRegistry.addRecipe(new ItemStack(Ultimatium), new Object[] { "PPP", "P P", "PPP", 'P', Diamondium });
 
+		GameRegistry.addRecipe(new ItemStack(UltimatiumHelm), new Object[] { "PPP", "P P", 'P', Ultimatium });
+		GameRegistry.addRecipe(new ItemStack(UltimatiumLegs), new Object[] { "PPP", "P P", "P P", 'P', Ultimatium });
+		GameRegistry.addRecipe(new ItemStack(UltimatiumChest), new Object[] { "P P", "PPP", "PPP", 'P', Ultimatium });
+		GameRegistry.addRecipe(new ItemStack(UltimatiumBoots), new Object[] { "P P", "P P", 'P', Ultimatium });
+		GameRegistry.addRecipe(new ItemStack(UltimatiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ultimatium });
+		
+		GameRegistry.addRecipe(new ItemStack(Ultimatiumpic),
+				new Object[] { "DDD", " S ", " S ", 'D', Ultimatium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Ultimatiumsword),
+				new Object[] { " D ", " D ", " S ", 'D', Ultimatium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Ultimatiumshovel),
+				new Object[] { " D ", " S ", " S ", 'D', Ultimatium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Ultimatiumaxe),
+				new Object[] { "DD ", "DS ", " S ", 'D', Ultimatium, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(Ultimatiumhoe),
+				new Object[] { "DD ", " S ", " S ", 'D', Ultimatium, 'S', Items.stick });
+		
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.blaze_rod),
 				new Object[] { Items.stick, new ItemStack(Items.blaze_powder) });
 
