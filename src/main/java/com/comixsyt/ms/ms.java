@@ -843,6 +843,7 @@ public class ms {
 		// Spider/Skeleton 100
 		DungeonHooks.addDungeonMob("Killer_Cow", 20);
 		DungeonHooks.addDungeonMob("creeper", 20);
+		DungeonHooks.addDungeonMob("KillerCow", 20);
 
 	}
 
