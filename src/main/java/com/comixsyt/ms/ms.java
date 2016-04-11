@@ -217,7 +217,6 @@ public class ms {
 	public static Block BeetCrop;
 	public static Item beetrootitem;
 	public static Item beetseed;
-	
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -350,11 +349,15 @@ public class ms {
 		mIron = new Item().setUnlocalizedName("mIron").setTextureName("ms:mIron").setCreativeTab(tabMSI);
 		GameRegistry.registerItem(mIron, mIron.getUnlocalizedName());
 
-		//Liquefier = new Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
-		//LiquefierActive = new Liquefier(true).setBlockName("LiquefierActive");
+		// Liquefier = new
+		// Liquefier(false).setBlockName("Liquefier").setCreativeTab(tabMSB);
+		// LiquefierActive = new
+		// Liquefier(true).setBlockName("LiquefierActive");
 
-		//GameRegistry.registerBlock(Liquefier, Liquefier.getUnlocalizedName());
-		//GameRegistry.registerBlock(LiquefierActive, LiquefierActive.getUnlocalizedName());
+		// GameRegistry.registerBlock(Liquefier,
+		// Liquefier.getUnlocalizedName());
+		// GameRegistry.registerBlock(LiquefierActive,
+		// LiquefierActive.getUnlocalizedName());
 
 		Grinder = new Grinder(false).setBlockName("Grinder").setCreativeTab(tabMSB);
 		GrinderActive = new Grinder(true).setBlockName("GrinderActive");
@@ -606,8 +609,9 @@ public class ms {
 
 		proxy.registerNetworkStuff();
 
-		//GameRegistry.addRecipe(new ItemStack(Liquefier),
-			//	new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B', Items.bucket });
+		// GameRegistry.addRecipe(new ItemStack(Liquefier),
+		// new Object[] { "III", "IBI", "III", 'I', Items.iron_ingot, 'B',
+		// Items.bucket });
 
 		GameRegistry.addShapelessRecipe(new ItemStack(iRod), new Object[] { mIron, new ItemStack(Items.stick) });
 		GameRegistry.addRecipe(new ItemStack(cBlade), new Object[] { " I ", "I I", " I ", 'I', Items.iron_ingot });
@@ -701,7 +705,7 @@ public class ms {
 				new Object[] { "DD ", "DS ", " S ", 'D', Diamondium, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack(Diamondiumhoe),
 				new Object[] { "DD ", " S ", " S ", 'D', Diamondium, 'S', Items.stick });
-		
+
 		// NetherRack
 		GameRegistry.addRecipe(new ItemStack(NRpic),
 				new Object[] { "DDD", " S ", " S ", 'D', Blocks.netherrack, 'S', Items.blaze_rod });
@@ -734,7 +738,7 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(UltimatiumChest), new Object[] { "P P", "PPP", "PPP", 'P', Ultimatium });
 		GameRegistry.addRecipe(new ItemStack(UltimatiumBoots), new Object[] { "P P", "P P", 'P', Ultimatium });
 		GameRegistry.addRecipe(new ItemStack(UltimatiumBlock), new Object[] { "PPP", "PPP", "PPP", 'P', Ultimatium });
-		
+
 		GameRegistry.addRecipe(new ItemStack(Ultimatiumpic),
 				new Object[] { "DDD", " S ", " S ", 'D', Ultimatium, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack(Ultimatiumsword),
@@ -745,7 +749,7 @@ public class ms {
 				new Object[] { "DD ", "DS ", " S ", 'D', Ultimatium, 'S', Items.stick });
 		GameRegistry.addRecipe(new ItemStack(Ultimatiumhoe),
 				new Object[] { "DD ", " S ", " S ", 'D', Ultimatium, 'S', Items.stick });
-		
+
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.blaze_rod),
 				new Object[] { Items.stick, new ItemStack(Items.blaze_powder) });
 
@@ -819,10 +823,8 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(EmeraldChest), new Object[] { "P P", "PPP", "PPP", 'P', Items.emerald });
 		GameRegistry.addRecipe(new ItemStack(EmeraldBoots), new Object[] { "P P", "P P", 'P', Items.emerald });
 
-
 		GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(mIron), 5.0F);
 
-		
 		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
 		// ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new
 		// WeightedRandomChestContent(new ItemStack(ITEM),MIN,MAX,RARITY));
@@ -837,6 +839,8 @@ public class ms {
 				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 2, 5, 8));
 		ChestGenHooks.getInfo(ChestGenHooks.STRONGHOLD_LIBRARY)
 				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 4, 19, 6));
+		ChestGenHooks.getInfo(ChestGenHooks.BONUS_CHEST)
+				.addItem(new WeightedRandomChestContent(new ItemStack(beetseed), 2, 6, 6));
 
 		// Add new dungeon mobs
 		// DungeonHooks.addDungeonMob("NAME", Chance); Chances - Zombie 200,
