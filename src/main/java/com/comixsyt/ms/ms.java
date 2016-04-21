@@ -2,6 +2,7 @@ package com.comixsyt.ms;
 
 import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
+import com.comixsyt.ms.block.Graphiteblock;
 import com.comixsyt.ms.block.Grinder;
 import com.comixsyt.ms.block.RubyBlock;
 import com.comixsyt.ms.block.RubyOre;
@@ -217,6 +218,9 @@ public class ms {
 	public static Block BeetCrop;
 	public static Item beetrootitem;
 	public static Item beetseed;
+
+	public static Item Graphite;
+	public static Block Graphite_block;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -521,6 +525,7 @@ public class ms {
 		RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
 				.setCreativeTab(tabMSB);
 		RubyBlock = new RubyBlock(Material.rock).setBlockName("RubyBlock").setBlockTextureName("ms:RubyBlock")
+				.setCreativeTab(tabMSB);RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
 				.setCreativeTab(tabMSB);
 
 		GameRegistry.registerItem(Ruby, Ruby.getUnlocalizedName());
@@ -598,6 +603,15 @@ public class ms {
 		GameRegistry.registerItem(beetseed, beetseed.getUnlocalizedName());
 		GameRegistry.registerItem(beetrootitem, beetrootitem.getUnlocalizedName());
 		GameRegistry.registerBlock(BeetCrop, BeetCrop.getUnlocalizedName());
+
+		Graphite = new Item().setUnlocalizedName("Graphite").setTextureName("graphiteDust").setCreativeTab(tabMSI);
+		GameRegistry.registerItem(Graphite, Graphite.getUnlocalizedName());
+		
+		Graphite_block = new Graphiteblock(Material.rock).setBlockName("GraphiteBlock").setBlockTextureName("ms:graphiteblock")
+				.setCreativeTab(tabMSB);
+		GameRegistry.registerBlock(Graphite_block, Graphite_block.getUnlocalizedName());
+		
+		
 
 	}
 

@@ -115,6 +115,8 @@ entity.Legoguy110_Dev.name=Dev Legoguy110
 entity.Comixs_Dev.name=Dev ComixsYT
 entity.Killer_Cow.name=Killer Cow
 
+item.Graphite.name=Graphite
+tile.GraphiteBlock.name=Graphite Block
 
 itemGroup.tabMST=MineMania Tools
 itemGroup.tabMSA=MineMania Armor
