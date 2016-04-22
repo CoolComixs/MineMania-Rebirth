@@ -525,7 +525,8 @@ public class ms {
 		RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
 				.setCreativeTab(tabMSB);
 		RubyBlock = new RubyBlock(Material.rock).setBlockName("RubyBlock").setBlockTextureName("ms:RubyBlock")
-				.setCreativeTab(tabMSB);RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
+				.setCreativeTab(tabMSB);
+		RubyOre = new RubyOre(Material.rock).setBlockName("RubyOre").setBlockTextureName("ms:RubyOre")
 				.setCreativeTab(tabMSB);
 
 		GameRegistry.registerItem(Ruby, Ruby.getUnlocalizedName());
@@ -604,14 +605,12 @@ public class ms {
 		GameRegistry.registerItem(beetrootitem, beetrootitem.getUnlocalizedName());
 		GameRegistry.registerBlock(BeetCrop, BeetCrop.getUnlocalizedName());
 
-		Graphite = new Item().setUnlocalizedName("Graphite").setTextureName("graphiteDust").setCreativeTab(tabMSI);
+		Graphite = new Item().setUnlocalizedName("Graphite").setTextureName("ms:Graphite").setCreativeTab(tabMSI);
 		GameRegistry.registerItem(Graphite, Graphite.getUnlocalizedName());
-		
-		Graphite_block = new Graphiteblock(Material.rock).setBlockName("GraphiteBlock").setBlockTextureName("ms:graphiteblock")
-				.setCreativeTab(tabMSB);
+
+		Graphite_block = new Graphiteblock(Material.rock).setBlockName("GraphiteBlock")
+				.setBlockTextureName("ms:graphiteblock").setCreativeTab(tabMSB);
 		GameRegistry.registerBlock(Graphite_block, Graphite_block.getUnlocalizedName());
-		
-		
 
 	}
 
@@ -838,6 +837,14 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(EmeraldBoots), new Object[] { "P P", "P P", 'P', Items.emerald });
 
 		GameRegistry.addSmelting(Items.iron_ingot, new ItemStack(mIron), 5.0F);
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.writable_book),
+				new Object[] { Graphite, new ItemStack(Items.book) });
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Graphite, 4), new Object[] { Graphite_block });
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Graphite_block),
+				new Object[] { Graphite, new ItemStack(Graphite), new ItemStack(Graphite), new ItemStack(Graphite) });
 
 		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
 		// ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new

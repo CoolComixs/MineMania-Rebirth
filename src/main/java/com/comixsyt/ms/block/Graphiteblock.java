@@ -13,7 +13,7 @@ public class Graphiteblock extends Block {
 	
 	public Graphiteblock(Material material) {
 		super(material);
-		this.setHardness(20.0F);
+		this.setHardness(10.0F);
 		this.setHarvestLevel("pickaxe", 2);	
 	}
 	
