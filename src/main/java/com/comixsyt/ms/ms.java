@@ -4,6 +4,7 @@ import com.comixsyt.ms.block.BeetCrop;
 import com.comixsyt.ms.block.DiamondiumBlock;
 import com.comixsyt.ms.block.Graphiteblock;
 import com.comixsyt.ms.block.Grinder;
+import com.comixsyt.ms.block.MeatBlock;
 import com.comixsyt.ms.block.RubyBlock;
 import com.comixsyt.ms.block.RubyOre;
 import com.comixsyt.ms.block.UltimatiumBlock;
@@ -48,7 +49,9 @@ import com.comixsyt.ms.item.glassHoe;
 import com.comixsyt.ms.item.glassPic;
 import com.comixsyt.ms.item.glassShovel;
 import com.comixsyt.ms.item.glassSword;
+import com.comixsyt.ms.item.groundbeef;
 import com.comixsyt.ms.item.hRoot;
+import com.comixsyt.ms.item.hamburger;
 import com.comixsyt.ms.item.itemDirtPic;
 import com.comixsyt.ms.item.potAxe;
 import com.comixsyt.ms.item.potHoe;
@@ -56,6 +59,7 @@ import com.comixsyt.ms.item.potPic;
 import com.comixsyt.ms.item.potShovel;
 import com.comixsyt.ms.item.potSword;
 import com.comixsyt.ms.item.potarmor;
+import com.comixsyt.ms.item.rawgroundbeef;
 import com.comixsyt.ms.item.rsAxe;
 import com.comixsyt.ms.item.rsHoe;
 import com.comixsyt.ms.item.rsPic;
@@ -219,8 +223,17 @@ public class ms {
 	public static Item beetrootitem;
 	public static Item beetseed;
 
+	public static Item rawgroundbeef;
+	public static Item groundbeef;
+	public static Item hamburger;
+
 	public static Item Graphite;
 	public static Block Graphite_block;
+
+	public static Block rbeefb;
+	public static Block beefb;
+	public static Block rporkb;
+	public static Block porkb;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);
@@ -612,6 +625,36 @@ public class ms {
 				.setBlockTextureName("ms:graphiteblock").setCreativeTab(tabMSB);
 		GameRegistry.registerBlock(Graphite_block, Graphite_block.getUnlocalizedName());
 
+		groundbeef = new groundbeef(8, 0.8f, true).setUnlocalizedName("groundbeef").setTextureName("ms:groundbeef")
+				.setCreativeTab(tabMSI);
+
+		rawgroundbeef = new rawgroundbeef(3, 0.3f, true).setUnlocalizedName("rawgroundbeef")
+				.setTextureName("ms:rawgroundbeef").setCreativeTab(tabMSI);
+
+		hamburger = new hamburger(15, 1.1f, true).setUnlocalizedName("hamburger").setTextureName("ms:hamburger")
+				.setCreativeTab(tabMSI);
+
+		GameRegistry.registerItem(groundbeef, groundbeef.getUnlocalizedName());
+		GameRegistry.registerItem(rawgroundbeef, rawgroundbeef.getUnlocalizedName());
+		GameRegistry.registerItem(hamburger, hamburger.getUnlocalizedName());
+
+		// IDK why, but I felt like saying that you should listen to Drastic
+		// Measures by Kansas if your out of ideas :P ~Comixs
+
+		rbeefb = new MeatBlock(Material.ground).setBlockName("rbeefb").setBlockTextureName("ms:rbeefb")
+				.setCreativeTab(tabMSB);
+		beefb = new MeatBlock(Material.ground).setBlockName("beefb").setBlockTextureName("ms:beefb")
+				.setCreativeTab(tabMSB);
+		rporkb = new MeatBlock(Material.ground).setBlockName("rporkb").setBlockTextureName("ms:rporkb")
+				.setCreativeTab(tabMSB);
+		porkb = new MeatBlock(Material.ground).setBlockName("porkb").setBlockTextureName("ms:porkb")
+				.setCreativeTab(tabMSB);
+
+		GameRegistry.registerBlock(rbeefb, rbeefb.getUnlocalizedName());
+		GameRegistry.registerBlock(beefb, beefb.getUnlocalizedName());
+		GameRegistry.registerBlock(rporkb, rporkb.getUnlocalizedName());
+		GameRegistry.registerBlock(porkb, porkb.getUnlocalizedName());
+
 	}
 
 	@EventHandler
@@ -846,6 +889,17 @@ public class ms {
 		GameRegistry.addShapelessRecipe(new ItemStack(Graphite_block),
 				new Object[] { Graphite, new ItemStack(Graphite), new ItemStack(Graphite), new ItemStack(Graphite) });
 
+		GameRegistry.addShapelessRecipe(new ItemStack(hamburger),
+				new Object[] { Items.bread, new ItemStack(Items.bread), new ItemStack(groundbeef) });
+
+		GameRegistry.addRecipe(new ItemStack(rbeefb), new Object[] { "MMM", "MMM", "MMM", 'M', Items.beef });
+		GameRegistry.addRecipe(new ItemStack(beefb), new Object[] { "MMM", "MMM", "MMM", 'M', Items.cooked_beef });
+
+		GameRegistry.addRecipe(new ItemStack(rporkb), new Object[] { "MMM", "MMM", "MMM", 'M', Items.porkchop });
+		GameRegistry.addRecipe(new ItemStack(porkb), new Object[] { "MMM", "MMM", "MMM", 'M', Items.cooked_porkchop });
+
+		
+		
 		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
 		// ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new
 		// WeightedRandomChestContent(new ItemStack(ITEM),MIN,MAX,RARITY));

@@ -118,6 +118,10 @@ entity.Killer_Cow.name=Killer Cow
 item.Graphite.name=Graphite
 tile.GraphiteBlock.name=Graphite Block
 
+item.rawgroundbeef.name=Raw Ground Beef
+item.groundbeef.name=Ground Beef
+item.hamburger.name=Hamburger
+
 itemGroup.tabMST=MineMania Tools
 itemGroup.tabMSA=MineMania Armor
 itemGroup.tabMSI=MineMania Items
