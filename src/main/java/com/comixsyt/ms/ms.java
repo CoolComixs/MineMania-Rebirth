@@ -898,8 +898,6 @@ public class ms {
 		GameRegistry.addRecipe(new ItemStack(rporkb), new Object[] { "MMM", "MMM", "MMM", 'M', Items.porkchop });
 		GameRegistry.addRecipe(new ItemStack(porkb), new Object[] { "MMM", "MMM", "MMM", 'M', Items.cooked_porkchop });
 
-		
-		
 		// Add new loot (Params: Itemstack(theItem), min, max, rarity)
 		// ChestGenHooks.getInfo(ChestGenHooks.PLACE).addItem(new
 		// WeightedRandomChestContent(new ItemStack(ITEM),MIN,MAX,RARITY));

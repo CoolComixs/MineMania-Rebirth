@@ -122,6 +122,11 @@ item.rawgroundbeef.name=Raw Ground Beef
 item.groundbeef.name=Ground Beef
 item.hamburger.name=Hamburger
 
+tile.rbeefb.name=Raw Beef Block
+tile.beefb.name= Beef Block
+tile.rporkb.name=Raw Pork Block
+tile.porkb.name=Pork Block
+
 itemGroup.tabMST=MineMania Tools
 itemGroup.tabMSA=MineMania Armor
 itemGroup.tabMSI=MineMania Items
