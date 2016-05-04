@@ -7,6 +7,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,8 +23,8 @@ public class EntityComixsMob extends EntityMob {
 		this.setSize(0.9F, 0.9F);
 		this.getNavigator().setCanSwim(true);
 		this.tasks.addTask(0, new EntityAIWander(this, 0.5D));
-		/*this.tasks.addTask(1, new EntityAIPanic(this, 1.25D));
-		this.tasks.addTask(2, new EntityAITempt(this, 1.0D, ms.Diamondium, false));
+		this.tasks.addTask(1, new EntityAISwimming(this));
+		/*this.tasks.addTask(2, new EntityAITempt(this, 1.0D, ms.Diamondium, false));
 		this.tasks.addTask(3, new EntityAIMate(this, 1.0D));
 		this.tasks.addTask(4, new EntityAIFollowParent(this, 1.1D));*/
 		this.tasks.addTask(5, new EntityAIAttackOnCollide(this, EntityPlayer.class, 0.5D, false));

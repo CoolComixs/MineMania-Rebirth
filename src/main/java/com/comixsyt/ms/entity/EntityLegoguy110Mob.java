@@ -7,13 +7,14 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIFollowParent;
 import net.minecraft.entity.ai.EntityAIMate;
 import net.minecraft.entity.ai.EntityAIPanic;
+import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAITempt;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class EntityLegoguy110Mob extends EntityAnimal {
+public class EntityLegoguy110Mob extends EntityAnimal  {
 
 	public EntityLegoguy110Mob(World par1World) {
 		super(par1World);
@@ -22,7 +23,8 @@ public class EntityLegoguy110Mob extends EntityAnimal {
 		this.tasks.addTask(1, new EntityAIPanic(this, 1.25D));
 		this.tasks.addTask(2, new EntityAITempt(this, 1.0D, ms.Ruby, false));
 		this.tasks.addTask(3, new EntityAIMate(this, 1.0D));
-		this.tasks.addTask(4, new EntityAIFollowParent(this, 1.1D)); 
+		this.tasks.addTask(4, new EntityAIFollowParent(this, 1.1D));
+		this.tasks.addTask(5, new EntityAISwimming(this));
 	}
 
 	 public boolean isAIEnabled()

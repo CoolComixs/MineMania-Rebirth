@@ -1,71 +1,9 @@
 package com.comixsyt.ms;
 
-import com.comixsyt.ms.block.BeetCrop;
-import com.comixsyt.ms.block.DiamondiumBlock;
-import com.comixsyt.ms.block.Graphiteblock;
-import com.comixsyt.ms.block.Grinder;
-import com.comixsyt.ms.block.MeatBlock;
-import com.comixsyt.ms.block.RubyBlock;
-import com.comixsyt.ms.block.RubyOre;
-import com.comixsyt.ms.block.UltimatiumBlock;
-import com.comixsyt.ms.block.UltimatiumOre;
-import com.comixsyt.ms.entity.EntityCC;
-import com.comixsyt.ms.entity.EntityKillerCow;
-import com.comixsyt.ms.entity.EntityLG;
-import com.comixsyt.ms.handler.GuiHandler;
-import com.comixsyt.ms.item.CHarmor;
-import com.comixsyt.ms.item.Diamondiumaxe;
-import com.comixsyt.ms.item.Diamondiumhoe;
-import com.comixsyt.ms.item.Diamondiumpic;
-import com.comixsyt.ms.item.Diamondiumshovel;
-import com.comixsyt.ms.item.Diamondiumsword;
-import com.comixsyt.ms.item.DirtAxe;
-import com.comixsyt.ms.item.DirtHoe;
-import com.comixsyt.ms.item.DirtShovel;
-import com.comixsyt.ms.item.DirtSword;
-import com.comixsyt.ms.item.Emeraldarmor;
-import com.comixsyt.ms.item.Emeraldaxe;
-import com.comixsyt.ms.item.Emeraldhoe;
-import com.comixsyt.ms.item.Emeraldpic;
-import com.comixsyt.ms.item.Emeraldshovel;
-import com.comixsyt.ms.item.Emeraldsword;
-import com.comixsyt.ms.item.NRaxe;
-import com.comixsyt.ms.item.NRhoe;
-import com.comixsyt.ms.item.NRpic;
-import com.comixsyt.ms.item.NRshovel;
-import com.comixsyt.ms.item.NRsword;
-import com.comixsyt.ms.item.Rubyarmor;
-import com.comixsyt.ms.item.Rubyaxe;
-import com.comixsyt.ms.item.Rubyhoe;
-import com.comixsyt.ms.item.Rubypic;
-import com.comixsyt.ms.item.Rubyshovel;
-import com.comixsyt.ms.item.Rubysword;
-import com.comixsyt.ms.item.Ultimatium;
-import com.comixsyt.ms.item.Ultimatiumarmor;
-import com.comixsyt.ms.item.beetrootitem;
-import com.comixsyt.ms.item.diamondiumarmor;
-import com.comixsyt.ms.item.glassAxe;
-import com.comixsyt.ms.item.glassHoe;
-import com.comixsyt.ms.item.glassPic;
-import com.comixsyt.ms.item.glassShovel;
-import com.comixsyt.ms.item.glassSword;
-import com.comixsyt.ms.item.groundbeef;
-import com.comixsyt.ms.item.hRoot;
-import com.comixsyt.ms.item.hamburger;
-import com.comixsyt.ms.item.itemDirtPic;
-import com.comixsyt.ms.item.potAxe;
-import com.comixsyt.ms.item.potHoe;
-import com.comixsyt.ms.item.potPic;
-import com.comixsyt.ms.item.potShovel;
-import com.comixsyt.ms.item.potSword;
-import com.comixsyt.ms.item.potarmor;
-import com.comixsyt.ms.item.rawgroundbeef;
-import com.comixsyt.ms.item.rsAxe;
-import com.comixsyt.ms.item.rsHoe;
-import com.comixsyt.ms.item.rsPic;
-import com.comixsyt.ms.item.rsShovel;
-import com.comixsyt.ms.item.rsSword;
-
+import com.comixsyt.ms.block.*;
+import com.comixsyt.ms.entity.*;
+import com.comixsyt.ms.handler.*;
+import com.comixsyt.ms.item.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -949,7 +887,7 @@ public class ms {
 		EntityLG.mainRegisrty();
 		EntityCC.mainRegisrty();
 		EntityKillerCow.mainRegistry();
-
+		EntityPG.mainRegisrty();
 	}
 
 	@EventHandler
