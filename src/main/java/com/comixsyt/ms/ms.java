@@ -172,6 +172,10 @@ public class ms {
 	public static Block beefb;
 	public static Block rporkb;
 	public static Block porkb;
+	
+	public static Block OrangeL;
+	public static Block LemonL;
+	public static Block CharryL;
 
 	public static final Item.ToolMaterial dirtMaterial = EnumHelper.addToolMaterial("dirtMaterial", 0, 15, 1.0F, 0.0F,
 			2);

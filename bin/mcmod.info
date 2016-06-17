@@ -1,0 +1,17 @@
+
+[
+{
+  "modid": "ms",
+  "name": "MineMania Rebirth",
+  "description": "MineMania Rebirth is the recreation of all my mods plus more!",
+  "version": "A1.6",
+  "mcversion": "1.7.10",
+  "url": "http://coolcomixs.github.io/MineMania-Rebirth/",
+  "updateUrl": "",
+  "authorList": ["ComixsYT", "Mr. Sheep"],
+  "credits": "PurpleGuyVincent",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

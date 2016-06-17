@@ -1,0 +1,134 @@
+item.DirtPickaxe.name=Dirt Pickaxe
+item.DirtSword.name=Dirt Sword
+item.DirtShovel.name=Dirt Shovel
+item.DirtHoe.name=Dirt Hoe
+item.DirtAxe.name=Dirt Axe
+
+item.glassPickaxe.name=Glass Pickaxe
+item.glassSword.name=Glass Sword
+item.glassShovel.name=Glass Shovel
+item.glassHoe.name=Glass Hoe
+item.glassAxe.name=Glass Axe
+
+item.potPickaxe.name=Potato Pickaxe
+item.potSword.name=Potato Sword
+item.potShovel.name=Potato Shovel
+item.potHoe.name=Potato Hoe
+item.potAxe.name=Potato Axe
+
+item.pothelm.name=Potato Helmet
+item.potchest.name=Potato Chestplate
+item.potlegs.name=Potato Leggings
+item.potboots.name=Potato Boots
+
+item.rsPickaxe.name=Redstone Pickaxe
+item.rsSword.name=Redstone Sword
+item.rsShovel.name=Redstone Shovel
+item.rsHoe.name=Redstone Hoe
+item.rsAxe.name=Redstone Axe
+
+item.hRoot.name=Holy Root
+
+item.Diamondium.name=Diamondium
+item.DiamondiumN.name=Diamondium Nugget
+item.diamondiumPickaxe.name=Diamondium Pickaxe
+item.diamondiumShovel.name=Diamondium Shovel
+item.diamondiumSword.name=Diamondium Sword
+item.diamondiumHoe.name=Diamondium Hoe
+item.diamondiumAxe.name=Diamondium Axe
+item.diamondiumhelm.name=Diamondium Helmet
+item.diamondiumchest.name=Diamondium Chestplate
+item.diamondiumlegs.name=Diamondium Leggings
+item.diamondiumboots.name=Diamondium Boots
+tile.DiamondiumBlock.name=Block of Diamondium
+
+item.CHHelm.name=ChainLeather Helmet
+item.CHChest.name=ChainLeather Chestplate
+item.CHLegs.name=ChainLeather Leggings
+item.CHBoots.name=ChainLeather Boots
+
+item.NRpic.name=Netherrack Pickaxe
+item.NRsword.name=Netherrack Sword
+item.NRhoe.name=Netherrack Hoe
+item.NRaxe.name=Netherrack Axe
+item.NRshovel.name=Netherrack Shovel
+
+tile.UltimatiumOre.name=Ultimatium Ore
+item.Ultimatium.name=Ultimatium Gem
+tile.UltimatiumBlock.name=Block of Ultimatium
+item.Ultimatiumpic.name=Ultimatium Pickaxe
+item.Ultimatiumsword.name=Ultimatium Sword
+item.Ultimatiumhoe.name=Ultimatium Hoe
+item.Ultimatiumshovel.name=Ultimatium Shovel
+item.Ultimatiumaxe.name=Ultimatium Axe
+item.UltimatiumHelm.name=Ultimatium Helmet
+item.UltimatiumChest.name=Ultimatium Chestplate
+item.UltimatiumLegs.name=Ultimatium Leggings
+item.UltimatiumBoots.name=Ultimatium Boots
+
+tile.Liquefier.name=Liquefier
+item.mIron.name=Molten Iron
+
+item.iRod.name=Iron Rod
+item.cBlade.name=Circular Blade
+item.Bladecombo.name=Circular Blade Combo
+tile.Grinder.name=Grinder
+
+item.coalDust.name=Coal Dust
+item.ironDust.name=Iron Dust
+item.goldDust.name=Gold Dust
+item.emeraldDust.name=Emerald Dust
+item.diamondDust.name=Diamond Dust
+item.ultimatiumDust.name=Ultimatium Dust
+item.diamondiumDust.name=Diamondium Dust
+item.rubyDust.name=Ruby Dust
+
+item.Ruby.name=Ruby
+tile.RubyOre.name=Ruby Ore
+tile.RubyBlock.name=Block of Ruby
+
+item.RubyAxe.name=Ruby Axe
+item.RubyHoe.name=Ruby Hoe
+item.RubyPickaxe.name=Ruby Pickaxe
+item.RubyShovel.name=Ruby Shovel
+item.RubySword.name=Ruby Sword
+item.Rubyhelm.name=Ruby Helmet
+item.Rubychest.name=Ruby Chestplate
+item.Rubylegs.name=Ruby Leggings
+item.Rubyboots.name=Ruby Boots
+
+item.EmeraldAxe.name=Emerald Axe
+item.EmeraldHoe.name=Emerald Hoe
+item.EmeraldPickaxe.name=Emerald Pickaxe
+item.EmeraldShovel.name=Emerald Shovel
+item.EmeraldSword.name=Emerald Sword
+item.Emeraldhelm.name=Emerald Helmet
+item.Emeraldchest.name=Emerald Chestplate
+item.Emeraldlegs.name=Emerald Leggings
+item.Emeraldboots.name=Emerald Boots
+
+item.beetseed.name=Beetroot Seeds
+item.beetrootitem.name=Beetroot
+tile.BeetCrop.name=Beetroot Crop
+
+entity.Legoguy110_Dev.name=Dev Legoguy110
+entity.Comixs_Dev.name=Dev ComixsYT
+entity.Killer_Cow.name=Killer Cow
+entity.Penguin.name=Penguin
+
+item.Graphite.name=Graphite
+tile.GraphiteBlock.name=Graphite Block
+
+item.rawgroundbeef.name=Raw Ground Beef
+item.groundbeef.name=Ground Beef
+item.hamburger.name=Hamburger
+
+tile.rbeefb.name=Raw Beef Block
+tile.beefb.name= Beef Block
+tile.rporkb.name=Raw Pork Block
+tile.porkb.name=Pork Block
+
+itemGroup.tabMST=MineMania Tools
+itemGroup.tabMSA=MineMania Armor
+itemGroup.tabMSI=MineMania Items
+itemGroup.tabMSB=MineMania Blocks
