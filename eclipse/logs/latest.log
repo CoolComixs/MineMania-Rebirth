@@ -1,0 +1,32 @@
+[21:34:19] [main/INFO]: Setting user: Player85
+[21:34:21] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:34:22] [Client thread/ERROR]: Couldn't initialize twitch stream
+[21:34:31] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineMania Rebirth
+[21:34:32] [Sound Library Loader/INFO]: Sound engine started
+[21:34:33] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[21:34:33] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[21:34:33] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:MineMania Rebirth
+[21:34:34] [Client thread/INFO]: Created: 512x256 textures/items-atlas
+[21:34:34] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:34:35] [Sound Library Loader/INFO]: Sound engine started
+[21:34:48] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:34:48] [Server thread/INFO]: Generating keypair
+[21:34:52] [Server thread/INFO]: Preparing start region for level 0
+[21:34:53] [Server thread/INFO]: Preparing spawn area: 70%
+[21:34:54] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:34:54] [Server thread/INFO]: Player85[local:E:55a6d9e5] logged in with entity id 394 at (317.33366970407894, 68.0, 202.61757331002502)
+[21:34:54] [Server thread/INFO]: Player85 joined the game
+[21:34:58] [Server thread/INFO]: Player85 has just earned the achievement [Taking Inventory]
+[21:34:58] [Client thread/INFO]: [CHAT] Player85 has just earned the achievement [Taking Inventory]
+[21:34:58] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2226ms behind, skipping 44 tick(s)
+[21:35:11] [Client thread/INFO]: Stopping!
+[21:35:11] [Server thread/INFO]: Stopping server
+[21:35:11] [Server thread/INFO]: Saving players
+[21:35:11] [Server thread/INFO]: Saving worlds
+[21:35:11] [Server thread/INFO]: Saving chunks for level 'Mod Test'/Overworld
+[21:35:11] [Server thread/INFO]: Saving chunks for level 'Mod Test'/Nether
+[21:35:11] [Server thread/INFO]: Saving chunks for level 'Mod Test'/The End
+[21:35:11] [Client Shutdown Thread/INFO]: Stopping server
+[21:35:11] [Client Shutdown Thread/INFO]: Saving players
+[21:35:11] [Client Shutdown Thread/INFO]: Saving worlds
+[21:35:11] [Client Shutdown Thread/INFO]: Saving chunks for level 'Mod Test'/Overworld

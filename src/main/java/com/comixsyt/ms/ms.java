@@ -596,7 +596,15 @@ public class ms {
 		GameRegistry.registerBlock(beefb, beefb.getUnlocalizedName());
 		GameRegistry.registerBlock(rporkb, rporkb.getUnlocalizedName());
 		GameRegistry.registerBlock(porkb, porkb.getUnlocalizedName());
-
+		
+		
+		OrangeL = new MSLeaves().setBlockName("OrangeL").setCreativeTab(tabMSB);
+		LemonL = new MSLeaves().setBlockName("LemonL").setCreativeTab(tabMSB); 
+		CharryL = new MSLeaves().setBlockName("CharryL").setCreativeTab(tabMSB);
+		
+		GameRegistry.registerBlock(OrangeL, ItemLeafBlocks.class, OrangeL.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(LemonL, ItemLeafBlocks.class, LemonL.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(CharryL, ItemLeafBlocks.class, CharryL.getUnlocalizedName().substring(5));
 	}
 
 	@EventHandler
