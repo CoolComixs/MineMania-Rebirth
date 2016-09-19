@@ -10,4 +10,4 @@ ComixsYT (Dev) and Legoguy/Mr. Seep (Dev and Textures).
 
 #Status/Info
 At the moment, the mod is in slow but steady development! I am looking for contributors
-If you have any interest in joining the project, add me on skype (cool.comixs) or email me (minemania@comixsyt.net)!
+If you have any interest in joining the project, add me on skype (cool.comixs) or email me (me@mreiff.space)!
